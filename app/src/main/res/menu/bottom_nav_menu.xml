@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/user"
+        android:title="@string/profile001" />
+
+    <item
+        android:id="@+id/navigation_timeTable"
+        android:icon="@drawable/timetable"
+        android:title="@string/time_table002" />
+
+    <item
+        android:id="@+id/navigation_exam"
+        android:icon="@drawable/exam"
+        android:title="@string/exam003" />
+    <item
+        android:id="@+id/navigation_papers"
+        android:icon="@drawable/papers"
+        android:title="@string/papers004" />
+
+</menu>
