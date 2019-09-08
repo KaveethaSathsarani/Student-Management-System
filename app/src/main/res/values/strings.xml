@@ -24,7 +24,9 @@
     <string name="contact_no">Contact No.</string>
     <string name="guardians_name">Guardians Name</string>
     <string name="guardians_contact_no">Guardians Contact No.</string>
-    <string name="edit">EDIT</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+
 </resources>
