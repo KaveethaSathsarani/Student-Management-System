@@ -11,4 +11,20 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="studentProf">studentProf</string>
+    <string name="backgroundtop">backgroundTop</string>
+    <string name="backgroundTop">backgroundTop</string>
+    <string name="profilePic">profilePic</string>
+    <string name="student_id01">Student ID</string>
+    <string name="student_name1">Student Name</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="school">School</string>
+    <string name="address">Address</string>
+    <string name="contact_no">Contact No.</string>
+    <string name="guardians_name">Guardians Name</string>
+    <string name="guardians_contact_no">Guardians Contact No.</string>
+    <string name="edit">EDIT</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
 </resources>

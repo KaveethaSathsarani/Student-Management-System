@@ -2,42 +2,45 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile" >
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/backgroundTop"
-        android:layout_width="wrap_content"
-        android:layout_height="220dp"
-        android:src="@drawable/studentprof"
+    <View
+        android:id="@+id/view2"
+        android:layout_width="374dp"
+        android:layout_height="591dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/formBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/backgroundTop" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/profilePic"
+        android:id="@+id/profilePic2"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="88dp"
         android:contentDescription="@string/profilePic"
         android:src="@drawable/sample"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/backgroundTop" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="163dp"
         android:layout_height="433dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="208dp"
         android:layout_marginEnd="8dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -109,7 +112,7 @@
     <LinearLayout
         android:layout_width="194dp"
         android:layout_height="436dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="208dp"
         android:layout_marginEnd="29dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -132,6 +135,29 @@
             android:layout_width="match_parent"
             android:layout_height="30dp" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="31dp">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/female"
+                app:layout_constraintStart_toEndOf="@+id/male"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <TextView
             android:id="@+id/textView34"
             android:layout_width="match_parent"
@@ -140,12 +166,12 @@
         <TextView
             android:id="@+id/textView35"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="60dp" />
 
         <TextView
             android:id="@+id/textView36"
             android:layout_width="match_parent"
-            android:layout_height="60dp" />
+            android:layout_height="30dp" />
 
         <TextView
             android:id="@+id/textView37"
@@ -155,24 +181,7 @@
         <TextView
             android:id="@+id/textView38"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
-        <TextView
-            android:id="@+id/textView39"
-            android:layout_width="match_parent"
-            android:layout_height="53dp" />
+            android:layout_height="52dp" />
 
     </LinearLayout>
-
-    <ImageButton
-        android:id="@+id/profileEdit"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="16dp"
-        android:background="@android:color/background_light"
-        android:src="@drawable/edit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/edit" />
 </androidx.constraintlayout.widget.ConstraintLayout>
