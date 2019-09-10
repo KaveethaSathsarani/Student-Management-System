@@ -29,4 +29,16 @@
     <string name="save">Save</string>
     <string name="edit">Edit</string>
 
+    <string name="examId1000">Exam ID</string>
+    <string name="subjectID1001">Subject ID</string>
+    <string name="examIdHint1002">Enter the Exam ID</string>
+    <string name="subjectId1003">Enter the Subject ID</string>
+    <string name="viewMarks1004">View Marks</string>
+    <string name="studentID1004">Student ID</string>
+    <string name="studentName1005">Student Name</string>
+    <string name="examName1006">Exam Name</string>
+    <string name="marks1007">Marks</string>
+    <string name="grade1008">Grade</string>
+    <string name="comments1009">Comments</string>
+    <string name="resultsSheet1110">Results Sheet</string>
 </resources>
