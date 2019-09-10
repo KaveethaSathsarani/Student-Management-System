@@ -11,4 +11,24 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_admin_notices">AdminNotices</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="delete">DELETE</string>
+    <string name="title">Title</string>
+    <string name="add">ADD</string>
+    <string name="update">UPDATE</string>
+    <string name="content">Content</string>
+    <string name="notice_ID2">Notice ID</string>
+    <string name="notice_id">Notice ID</string>
+    <string name="notices">NOTICES</string>
+    <string name="for_all_students">For All Students</string>
+    <string name="please_pay_your_class_fees_before_2nd_week">Please pay your class fees before 2nd week</string>
+    <string name="for_grade_9_students">For Grade 9 Students</string>
+    <string name="there_will_be_no_history_class_on_16th_of_september">There will be no History class on 16th of September</string>
+
+
+
+
+
 </resources>
