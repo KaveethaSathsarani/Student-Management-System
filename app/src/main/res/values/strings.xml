@@ -31,4 +31,34 @@
 
 
 
+    <string name="studentProf">studentProf</string>
+    <string name="backgroundtop">backgroundTop</string>
+    <string name="backgroundTop">backgroundTop</string>
+    <string name="profilePic">profilePic</string>
+    <string name="student_id01">Student ID</string>
+    <string name="student_name1">Student Name</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="school">School</string>
+    <string name="address">Address</string>
+    <string name="contact_no">Contact No.</string>
+    <string name="guardians_name">Guardians Name</string>
+    <string name="guardians_contact_no">Guardians Contact No.</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+
+    <string name="examId1000">Exam ID</string>
+    <string name="subjectID1001">Subject ID</string>
+    <string name="examIdHint1002">Enter the Exam ID</string>
+    <string name="subjectId1003">Enter the Subject ID</string>
+    <string name="viewMarks1004">View Marks</string>
+    <string name="studentID1004">Student ID</string>
+    <string name="studentName1005">Student Name</string>
+    <string name="examName1006">Exam Name</string>
+    <string name="marks1007">Marks</string>
+    <string name="grade1008">Grade</string>
+    <string name="comments1009">Comments</string>
+    <string name="resultsSheet1110">Results Sheet</string>
 </resources>

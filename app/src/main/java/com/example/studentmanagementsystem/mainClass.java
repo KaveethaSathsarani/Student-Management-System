@@ -13,7 +13,14 @@ import androidx.fragment.app.Fragment;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class mainClass extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -26,6 +33,7 @@ public class mainClass extends AppCompatActivity implements BottomNavigationView
         navView.setOnNavigationItemSelectedListener(this);
 
         loadFragment(new Profile());
+
     }
 
 
