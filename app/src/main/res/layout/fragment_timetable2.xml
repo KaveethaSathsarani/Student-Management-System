@@ -7,24 +7,110 @@
     tools:context=".TimeTable2">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/timetableId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="316dp"
-        android:layout_marginEnd="156dp"
-        android:text="fgdfgdfg"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="236dp"
+        android:text="@string/time_table_id"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/teacher_3000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="176dp"
-        android:text="fdgfdgdfg"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="288dp"
+        android:text="@string/teacher3000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/timetableId" />
+
+    <TextView
+        android:id="@+id/venue_3000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="296dp"
+        android:text="@string/venue3000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teacher_3000" />
+
+    <TextView
+        android:id="@+id/day_3000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="320dp"
+        android:text="@string/day3000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/venue_3000" />
+
+    <TextView
+        android:id="@+id/time_3000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="308dp"
+        android:text="@string/time3000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day_3000" />
+
+    <TextView
+        android:id="@+id/viewTeacher_3000"
+        android:layout_width="178dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="27dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewTimetable" />
+
+    <TextView
+        android:id="@+id/viewVenue_3000"
+        android:layout_width="180dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="27dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewTeacher_3000" />
+
+    <TextView
+        android:id="@+id/viewDay_3000"
+        android:layout_width="173dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="32dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewVenue_3000" />
+
+    <EditText
+        android:id="@+id/viewTime_3000"
+        android:layout_width="183dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="22dp"
+        android:ems="10"
+        android:inputType="time"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewDay_3000" />
+
+    <TextView
+        android:id="@+id/viewTimetable"
+        android:layout_width="176dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="29dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

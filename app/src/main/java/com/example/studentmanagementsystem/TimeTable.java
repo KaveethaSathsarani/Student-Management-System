@@ -6,13 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import android.view.View;
-import android.view.View.OnClickListener;
 
 
 public class TimeTable extends Fragment {
@@ -24,7 +19,7 @@ public class TimeTable extends Fragment {
     public View onCreateView( LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
         View v =  inflater.inflate(R.layout.fragment_timetable, container,false);
 
-        b1 = v.findViewById(R.id.timetablebutton);
+        b1 = v.findViewById(R.id.viewTimetable);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

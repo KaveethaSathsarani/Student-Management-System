@@ -58,4 +58,11 @@
     <string name="grade1008">Grade</string>
     <string name="comments1009">Comments</string>
     <string name="resultsSheet1110">Results Sheet</string>
+    <string name="select_id3000">Select ID</string>
+    <string name="viewTimetable">VIEW</string>
+    <string name="time_table_id">Time Table ID</string>
+    <string name="teacher3000">Teacher</string>
+    <string name="venue3000">Venue</string>
+    <string name="day3000">Day</string>
+    <string name="time3000">Time</string>
 </resources>

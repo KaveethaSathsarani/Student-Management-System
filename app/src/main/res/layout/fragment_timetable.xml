@@ -8,23 +8,33 @@
     tools:context=".Profile">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/selectId_3000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="140dp"
-        android:text="zczxczx"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="92dp"
+        android:text="@string/select_id3000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/timetablebutton"
+        android:id="@+id/viewTimetable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="204dp"
-        android:layout_marginEnd="144dp"
-        android:text="Button"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="72dp"
+        android:text="@string/viewTimetable"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/selectIdSpinner_3000"
+        android:layout_width="195dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
