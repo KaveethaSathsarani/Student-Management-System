@@ -1,7 +1,5 @@
 package com.example.studentmanagementsystem;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -9,7 +7,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,7 +18,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class mainClass extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -32,9 +30,16 @@ public class mainClass extends AppCompatActivity implements BottomNavigationView
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(this);
 
-        loadFragment(new Profile());
+        //loadFragment(new Profile());
+
+        TimeTable timeTable = new TimeTable();
+        FragmentManager fm = getSupportFragmentManager();
+
+        fm.beginTransaction().add(R.id.container,timeTable).commit();
 
     }
+
+
 
 
     private boolean loadFragment(Fragment fragment){
@@ -69,9 +74,9 @@ public class mainClass extends AppCompatActivity implements BottomNavigationView
                 fragment = new TimeTable();
                 break;
 
-            case R.id.notification_button:
+            /*case R.id.notification_button:
                 fragment = new Notifications();
-                break;
+                break;*/
 
         }
         return loadFragment(fragment);
@@ -80,7 +85,7 @@ public class mainClass extends AppCompatActivity implements BottomNavigationView
     public void callNotices(View view) {
 
 
-        Fragment fragment1;
+        /*Fragment fragment1;
 
         if (view == findViewById(R.id.notification_button)) {
             Log.i("Info","notification button clicked");
@@ -91,7 +96,7 @@ public class mainClass extends AppCompatActivity implements BottomNavigationView
             //ft.commit();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment1).commit();
 
-        }
+        }*/
     }
 
     }

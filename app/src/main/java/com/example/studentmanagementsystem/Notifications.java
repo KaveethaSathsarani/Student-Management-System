@@ -19,7 +19,7 @@ public class Notifications extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_notifiction, null);
 
-        Button adminbtn = (Button) rootView.findViewById(R.id.AdminNotices);
+        /*Button adminbtn = (Button) rootView.findViewById(R.id.AdminNotices);
         adminbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,7 +27,7 @@ public class Notifications extends Fragment {
                 Intent intent = new Intent(getContext(), AdminNotices.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         return rootView;
     }
