@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColour"
+    tools:context=".AdminMenu">
+
+    <ImageButton
+        android:id="@+id/profiles"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/admin_menu_button"
+        android:contentDescription="@string/addprofiles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/admin_user" />
+
+    <ImageButton
+        android:id="@+id/timetables"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/admin_menu_button"
+        android:contentDescription="@string/addtimetables"
+        android:src="@drawable/admin_timetable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/admin_timetable" />
+
+    <ImageButton
+        android:id="@+id/exam"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/admin_menu_button"
+        android:contentDescription="@string/addexams"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profiles"
+        tools:src="@drawable/admin_exam" />
+
+    <ImageButton
+        android:id="@+id/papers"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/admin_menu_button"
+        android:contentDescription="@string/addpapers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timetables"
+        tools:src="@drawable/admin_papers" />
+
+    <ImageButton
+        android:id="@+id/notifications"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/admin_menu_button"
+        android:contentDescription="@string/addnotifications"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exam"
+        tools:src="@drawable/admin_notification" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="196dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/actor"
+        android:text="@string/menu"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_light"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,32 +8,22 @@
     tools:context=".Profile" >
 
     <ImageView
-        android:id="@+id/backgroundTop"
-        android:layout_width="wrap_content"
-        android:layout_height="220dp"
-        android:src="@drawable/studentprof"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/backgroundTop" />
-
-    <ImageView
         android:id="@+id/profilePic"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginTop="164dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/profilePic"
         android:src="@drawable/sample"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/backgroundTop" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="163dp"
         android:layout_height="433dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="8dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,72 +34,72 @@
         <TextView
             android:id="@+id/studentId"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="28dp"
             android:text="@string/student_id01"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/studentName"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="28dp"
             android:text="@string/student_name1"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/DOB"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="28dp"
             android:text="@string/date_of_birth"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/gender"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="28dp"
             android:text="@string/gender"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/school"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="28dp"
             android:text="@string/school"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/address"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="56dp"
             android:text="@string/address"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/contacNO"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="28dp"
             android:text="@string/contact_no"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/guardianNane"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="28dp"
             android:text="@string/guardians_name"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/guardianCNo"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:text="@string/guardians_contact_no"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="194dp"
         android:layout_height="436dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="29dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,42 +110,42 @@
         <TextView
             android:id="@+id/textView31"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="28dp" />
 
         <TextView
             android:id="@+id/textView32"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="28dp" />
 
         <TextView
             android:id="@+id/textView33"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="28dp" />
 
         <TextView
             android:id="@+id/textView34"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="28dp" />
 
         <TextView
             android:id="@+id/textView35"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="28dp" />
 
         <TextView
             android:id="@+id/textView36"
             android:layout_width="match_parent"
-            android:layout_height="60dp" />
+            android:layout_height="56dp" />
 
         <TextView
             android:id="@+id/textView37"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="28dp" />
 
         <TextView
             android:id="@+id/textView38"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="28dp" />
 
         <TextView
             android:id="@+id/textView39"
@@ -166,13 +156,13 @@
 
     <ImageButton
         android:id="@+id/profileEdit"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="28dp"
         android:background="@android:color/background_light"
+        android:contentDescription="@string/edit"
         android:src="@drawable/edit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/edit" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
