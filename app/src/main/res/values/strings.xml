@@ -79,5 +79,9 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="title_activity_admin__profile">Admin_Profile</string>
     <string name="profile_edit">Profile Edit</string>
+    <string name="password">Password</string>
+    <string name="create1">Create</string>
+    <string name="admin_name">Admin Name</string>
+    <string name="admin_id">Admin Id</string>
 
 </resources>

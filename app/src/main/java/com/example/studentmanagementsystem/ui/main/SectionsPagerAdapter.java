@@ -37,9 +37,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             case 1:
                 FragmentAdminProfile2 p2 = new FragmentAdminProfile2();
                 return p2;
-            case 2:
-                FragmentAdminProfile3 p3 = new FragmentAdminProfile3();
-                return p3;
+
                 default:
                     return null;
 
@@ -53,8 +51,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             case 0:
                 return "Student";
             case 1:
-                return "View";
-            case 2:
                 return "Admin";
 
                 default:
@@ -65,6 +61,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 3;
+        return 2;
     }
 }
