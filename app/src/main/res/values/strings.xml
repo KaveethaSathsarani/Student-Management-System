@@ -76,4 +76,9 @@
     <string name="update_timetable_data">UPDATE</string>
     <string name="delete_timetable_data">DELETE</string>
     <string name="next_admin">NEXT</string>
+    <string name="subject_id3000">Subject ID</string>
+    <string name="subject_name3000">Subject Name</string>
+    <string name="add_subject">INSERT</string>
+    <string name="delete_subject">DELETE</string>
+    <string name="view_subject3000">VIEW</string>
 </resources>

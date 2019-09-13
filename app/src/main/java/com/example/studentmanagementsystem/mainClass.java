@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +23,8 @@ import java.util.ArrayList;
 
 public class mainClass extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
+
+    private Button button3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,7 @@ public class mainClass extends AppCompatActivity implements BottomNavigationView
         FragmentManager fm = getSupportFragmentManager();
 
         fm.beginTransaction().add(R.id.container,timeTable).commit();
+
 
     }
 
