@@ -19,7 +19,7 @@ public class TimeTable extends Fragment {
     public View onCreateView( LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
         View v =  inflater.inflate(R.layout.fragment_timetable, container,false);
 
-        b1 = v.findViewById(R.id.viewTimetable);
+        b1 = v.findViewById(R.id.viewTimetableId);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -65,4 +65,15 @@
     <string name="venue3000">Venue</string>
     <string name="day3000">Day</string>
     <string name="time3000">Time</string>
+    <string name="select_id3001">Select ID</string>
+    <string name="viewTimetable_admin">View</string>
+    <string name="time_table_id_admin">Time Table ID</string>
+    <string name="teacher_admin">Teacher</string>
+    <string name="venue_admin">Venue</string>
+    <string name="day_admin">Day</string>
+    <string name="time_admin">Time</string>
+    <string name="add_timetable_data">ADD</string>
+    <string name="update_timetable_data">UPDATE</string>
+    <string name="delete_timetable_data">DELETE</string>
+    <string name="next_admin">NEXT</string>
 </resources>

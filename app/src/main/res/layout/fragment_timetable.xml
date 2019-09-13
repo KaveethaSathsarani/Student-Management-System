@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/viewTimetable"
+        android:id="@+id/viewTimetableId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
