@@ -27,9 +27,6 @@
     <string name="there_will_be_no_history_class_on_16th_of_september">There will be no History class on 16th of September</string>
 
 
-
-
-
     <string name="studentProf">studentProf</string>
     <string name="backgroundtop">backgroundTop</string>
     <string name="backgroundTop">backgroundTop</string>
@@ -60,12 +57,27 @@
     <string name="grade1008">Grade</string>
     <string name="comments1009">Comments</string>
     <string name="resultsSheet1110">Results Sheet</string>
-    <string name="addprofiles">ADDPROFILES</string>
     <string name="addpapers">ADDPAPERS</string>
     <string name="addnotifications">ADDNOTIFICATIONS</string>
     <string name="addexams">ADDEXAMS</string>
     <string name="addtimetables">ADDTIMETABLES</string>
-    <string name="menu">Menu</string>
     <string name="title_activity_admin_profile">AdminProfile</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="sign_in">Sign In</string>
+    <string name="username">Username</string>
+    <string name="addprofiles">ADDPROFILES</string>
+    <string name="menu">Menu</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_admin__profile">Admin_Profile</string>
+    <string name="profile_edit">Profile Edit</string>
 
 </resources>

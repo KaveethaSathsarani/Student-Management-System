@@ -8,4 +8,5 @@
     <color name="primaryColour">#64AFF0</color>
     <color name="formBackground">#46808382</color>
     <color name="button">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
 </resources>

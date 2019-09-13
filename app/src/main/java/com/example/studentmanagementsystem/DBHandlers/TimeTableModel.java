@@ -1,8 +1,4 @@
-package com.example.studentmanagementsystem;
-
-import java.util.Date;
-
-import javax.security.auth.Subject;
+package com.example.studentmanagementsystem.DBHandlers;
 
 public class TimeTableModel {
 

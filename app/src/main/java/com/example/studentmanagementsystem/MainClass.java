@@ -7,6 +7,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.MenuItem;
 import android.view.View;
@@ -18,7 +19,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class mainClass extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class MainClass extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
 
     @Override
@@ -29,6 +30,10 @@ public class mainClass extends AppCompatActivity implements BottomNavigationView
         navView.setOnNavigationItemSelectedListener(this);
 
         loadFragment(new Profile());
+
+        FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.fragment_container,new Profile());
+        fragmentTransaction.commit();
 
     }
 
@@ -72,4 +77,6 @@ public class mainClass extends AppCompatActivity implements BottomNavigationView
         }
         return loadFragment(fragment);
     }
+
+
 }
