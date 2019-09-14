@@ -94,6 +94,10 @@ public class AdminTimeTable extends AppCompatActivity {
 
         }
 
+
+
+
+
     public void retrieveData(){
 
         listener = ref.addValueEventListener(new ValueEventListener() {
@@ -102,7 +106,10 @@ public class AdminTimeTable extends AppCompatActivity {
 
                 for(DataSnapshot item:dataSnapshot.getChildren()){
 
-                    spinnerDataList.add(item.getValue().toString());
+
+
+                    String subId = item.child("subId").getValue(String.class);
+                    spinnerDataList.add(subId);
 
                 }
 
