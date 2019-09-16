@@ -27,14 +27,15 @@ import java.util.List;
 
 public class AdminTimeTable extends AppCompatActivity {
 
-    EditText subId,subName;
-    //EditText timeTableId,time,teacherName,venue,day;
+    EditText subId,subName,time,teacherName,venue,day;
     Button add_subject;
     //Button add_data3000;
     //FirebaseDatabase database;
     DatabaseReference ref;
+    //DatabaseReference ref3001;
+    //DatabaseReference ref3002;
     SubjectModel subjectModel;
-    TimeTableModel timeTableModel;
+    //TimeTableModel timeTableModel;
     Spinner spinner;
     ValueEventListener listener;
     ArrayAdapter<String> adapter;
@@ -48,9 +49,16 @@ public class AdminTimeTable extends AppCompatActivity {
 
         subId = (EditText) findViewById(R.id.subId_3000);
         subName = (EditText) findViewById(R.id.sub_name3001);
-
         add_subject = (Button)findViewById(R.id.add_subject);
+
         subjectModel = new SubjectModel();
+
+        //selectIdSpinner_3001 = (Spinner) findViewById(R.id.selectIdSpinner_3001);
+
+        teacherName = (EditText) findViewById(R.id.teacher_3001);
+        venue = (EditText) findViewById(R.id.venue_3001);
+        day = (EditText) findViewById(R.id.day_3001);
+        time = (EditText) findViewById(R.id.time_3001);
 
         spinner = (Spinner)findViewById(R.id.selectIdSpinner_3001);
 
@@ -69,34 +77,19 @@ public class AdminTimeTable extends AppCompatActivity {
 
                 subjectModel.setSubId(subId.getText().toString());
                 subjectModel.setSubName(subName.getText().toString());
+                subjectModel.setTeacherName(teacherName.getText().toString());
+                subjectModel.setVenue(venue.getText().toString());
+                subjectModel.setDay(day.getText().toString());
+                subjectModel.setTime(time.getText().toString());
 
                 ref.child(subId.getText().toString()).setValue(subjectModel);
                 Toast.makeText(getApplicationContext(),"Succesfully Data Inserted",Toast.LENGTH_SHORT).show();
 
             }
 
-
-
         });
 
-
-        //timeTableModel = new TimeTableModel();
-
-
-    /*
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-                //Toast.makeText(AdminTimeTable.this,databaseError.getMessage(),Toast.LENGTH_LONG).show();
-
-            }
-        });*/
-
         }
-
-
-
-
 
     public void retrieveData(){
 
@@ -105,8 +98,6 @@ public class AdminTimeTable extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 for(DataSnapshot item:dataSnapshot.getChildren()){
-
-
 
                     String subId = item.child("subId").getValue(String.class);
                     spinnerDataList.add(subId);
@@ -124,8 +115,6 @@ public class AdminTimeTable extends AppCompatActivity {
         });
 
 
-
     }
-
 
 }

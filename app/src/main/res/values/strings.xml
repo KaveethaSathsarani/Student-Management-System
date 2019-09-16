@@ -81,4 +81,5 @@
     <string name="add_subject">INSERT</string>
     <string name="delete_subject">DELETE</string>
     <string name="view_subject3000">VIEW</string>
+    <string name="subjectId_format">Format Ex: Grade_11_SubjectName</string>
 </resources>

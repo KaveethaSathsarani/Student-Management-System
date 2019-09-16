@@ -39,12 +39,7 @@ public class mainClass extends AppCompatActivity implements BottomNavigationView
         FragmentManager fm = getSupportFragmentManager();
 
         fm.beginTransaction().add(R.id.container,timeTable).commit();
-
-
     }
-
-
-
 
     private boolean loadFragment(Fragment fragment){
         if(fragment != null){

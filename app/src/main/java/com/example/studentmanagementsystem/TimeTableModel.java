@@ -6,7 +6,7 @@ import javax.security.auth.Subject;
 
 public class TimeTableModel {
 
-    private SubjectModel subject;
+    /*private SubjectModel subject;
     private String timeTableId;
     private String time;
     private String teacherName;
@@ -18,8 +18,7 @@ public class TimeTableModel {
 
 
 
-    public TimeTableModel(SubjectModel
-                                  subject, String timeTableId, String time, String teacherName, String venue, String day) {
+    public TimeTableModel(SubjectModel subject, String timeTableId, String time, String teacherName, String venue, String day) {
         this.subject = subject;
         this.timeTableId = timeTableId;
         this.time = time;
@@ -73,5 +72,5 @@ public class TimeTableModel {
 
     public void setSubject(SubjectModel subject) {
         this.subject = subject;
-    }
+    }*/
 }
