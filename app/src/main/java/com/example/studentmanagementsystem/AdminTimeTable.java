@@ -39,10 +39,11 @@ public class AdminTimeTable extends AppCompatActivity {
     //DatabaseReference ref3002;
     SubjectModel subjectModel;
     //TimeTableModel timeTableModel;
-    Spinner spinner;
+    Spinner spinner,spinner2;
     ValueEventListener listener;
     ArrayAdapter<String> adapter;
     ArrayList<String> spinnerDataList;
+    View selectedView = null;  //Declare it as a class level variable so that you don't need to make it final
 
 
     @Override
@@ -77,6 +78,7 @@ public class AdminTimeTable extends AppCompatActivity {
 
 
         spinner = (Spinner)findViewById(R.id.selectIdSpinner_3001);
+        spinner2 = (Spinner)findViewById(R.id.selectIdSpinner_3001);
 
         ref = FirebaseDatabase.getInstance().getReference().child("SubjectModel");
 
@@ -86,40 +88,17 @@ public class AdminTimeTable extends AppCompatActivity {
         spinner.setAdapter(adapter );
         retrieveData();
 
-        viewTimetable_2.setOnClickListener(new View.OnClickListener() {
+        /*spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-
-                viewref = FirebaseDatabase.getInstance().getReference().child("SubjectModel").child("Grade_11_IT");
-
-                viewref.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                        String viewDay = dataSnapshot.child("day").getValue().toString();
-                        String viewSubId = dataSnapshot.child("subId").getValue().toString();
-                        String viewSubName = dataSnapshot.child("subName").getValue().toString();
-                        String viewTeacherName = dataSnapshot.child("teacherName").getValue().toString();
-                        String viewTime = dataSnapshot.child("time").getValue().toString();
-                        String viewVenue = dataSnapshot.child("venue").getValue().toString();
-                        day.setText(viewDay);
-                        subId.setText(viewSubId);
-                        subName.setText(viewSubName);
-                        teacherName.setText(viewTeacherName);
-                        time.setText(viewTime);
-                        venue.setText(viewVenue);
-
-
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selectedView = view;
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        });
+        });*/
+
 
         add_subject.setOnClickListener(new View.OnClickListener() {
 
@@ -140,7 +119,71 @@ public class AdminTimeTable extends AppCompatActivity {
 
         });
 
-        /*spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        viewTimetable_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                viewref = FirebaseDatabase.getInstance().getReference().child("SubjectModel").child("Grade_08_English");
+
+                viewref.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        String viewDay = dataSnapshot.child("day").getValue().toString();
+                        String viewSubId = dataSnapshot.child("subId").getValue().toString();
+                        String viewSubName = dataSnapshot.child("subName").getValue().toString();
+                        String viewTeacherName = dataSnapshot.child("teacherName").getValue().toString();
+                        String viewTime = dataSnapshot.child("time").getValue().toString();
+                        String viewVenue = dataSnapshot.child("venue").getValue().toString();
+                        day.setText(viewDay);
+                        subId.setText(viewSubId);
+                        subName.setText(viewSubName);
+                        teacherName.setText(viewTeacherName);
+                        time.setText(viewTime);
+                        venue.setText(viewVenue);
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+        });
+
+
+    }
+
+    public void retrieveData(){
+
+        listener = ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for(DataSnapshot item:dataSnapshot.getChildren()){
+
+                    String subId = item.child("subId").getValue(String.class);
+                    spinnerDataList.add(subId);
+
+                }
+
+                adapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+    }
+
+
+
+    /*spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
@@ -200,36 +243,5 @@ public class AdminTimeTable extends AppCompatActivity {
             }
         });*/
 
-
-
-        }
-
-
-
-    public void retrieveData(){
-
-        listener = ref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                for(DataSnapshot item:dataSnapshot.getChildren()){
-
-                    String subId = item.child("subId").getValue(String.class);
-                    spinnerDataList.add(subId);
-
-                }
-
-                adapter.notifyDataSetChanged();
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-
-    }
 
 }
