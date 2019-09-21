@@ -1,15 +1,31 @@
 package com.example.studentmanagementsystem;
 
-public class NoticesModel {
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+
+public class NoticesModel  {
+
     private String id;
     private String content;
     private String title;
 
-    public NoticesModel(String id, String content, String title) {
-        this.id = id;
-        this.content = content;
-        this.title = title;
+
+
+    public NoticesModel() {
     }
+
+    public NoticesModel(String id,String title,String content) {
+
+        this.id = id;
+        this.title = title;
+        this.content = content;
+    }
+
+
 
     public String getId() {
         return id;
@@ -34,4 +50,5 @@ public class NoticesModel {
     public void setTitle(String title) {
         this.title = title;
     }
+
 }

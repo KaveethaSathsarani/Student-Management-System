@@ -69,9 +69,6 @@ public class mainClass extends AppCompatActivity implements BottomNavigationView
                 fragment = new TimeTable();
                 break;
 
-            case R.id.notification_button:
-                fragment = new Notifications();
-                break;
 
         }
         return loadFragment(fragment);
@@ -80,16 +77,12 @@ public class mainClass extends AppCompatActivity implements BottomNavigationView
     public void callNotices(View view) {
 
 
-        Fragment fragment1;
+        Fragment fragment;
 
         if (view == findViewById(R.id.notification_button)) {
             Log.i("Info","notification button clicked");
-            fragment1 = new Notifications();
-            //FragmentManager fm1 = getFragmentManager();
-            //FragmentTransaction ft = fm1.beginTransaction();
-            //ft.replace(R.id.fragment_container,fragment1);
-            //ft.commit();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment1).commit();
+            fragment = new Notifications();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
 
         }
     }

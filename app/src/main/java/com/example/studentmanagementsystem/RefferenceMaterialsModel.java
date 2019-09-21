@@ -7,7 +7,7 @@ public class RefferenceMaterialsModel {
     public RefferenceMaterialsModel(){
 
     }
-    public RefferenceMaterialsModel(String id, String url, String name) {
+    public RefferenceMaterialsModel(String id, String name,String url) {
         this.id = id;
         this.url = url;
         this.name = name;

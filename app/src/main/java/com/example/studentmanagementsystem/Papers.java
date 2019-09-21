@@ -1,5 +1,6 @@
 package com.example.studentmanagementsystem;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +27,16 @@ public class Papers extends Fragment {
         //return inflater.inflate(R.layout.fragment_papers,null);
 
         View v =inflater.inflate(R.layout.fragment_papers, container, false);
+
+        Button adminbtn = (Button) v.findViewById(R.id.papers_btn);
+        adminbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Pass the context and the Activity class you need to open from the Fragment Class, to the Intent
+                Intent intent = new Intent(getContext(), AdminReferenceMaterials.class);
+                startActivity(intent);
+            }
+        });
 
         return v;
 

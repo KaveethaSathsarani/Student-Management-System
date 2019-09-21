@@ -14,21 +14,13 @@
     <string name="title_activity_admin_notices">AdminNotices</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
-    <string name="delete">DELETE</string>
-    <string name="title">Title</string>
-    <string name="add">ADD</string>
-    <string name="update">UPDATE</string>
-    <string name="content">Content</string>
-    <string name="notice_ID2">Notice ID</string>
-    <string name="notice_id">Notice ID</string>
-    <string name="notices">NOTICES</string>
-    <string name="for_all_students">For All Students</string>
-    <string name="please_pay_your_class_fees_before_2nd_week">Please pay your class fees before 2nd week</string>
-    <string name="for_grade_9_students">For Grade 9 Students</string>
-    <string name="there_will_be_no_history_class_on_16th_of_september">There will be no History class on 16th of September</string>
-
-
-
+    <string name="delete3001">DELETE</string>
+    <string name="title3002">Title</string>
+    <string name="add3003">ADD</string>
+    <string name="update3004">UPDATE</string>
+    <string name="content3005">Content</string>
+    <string name="notice_id3006">Notice ID</string>
+    <string name="notices3007">NOTICES</string>
 
 
     <string name="studentProf">studentProf</string>
@@ -61,4 +53,11 @@
     <string name="grade1008">Grade</string>
     <string name="comments1009">Comments</string>
     <string name="resultsSheet1110">Results Sheet</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_admin_papers">AdminPapers</string>
+    <string name="choose3009">CHOOSE</string>
+    <string name="reference_materials_id3010">Reference Materials ID</string>
+    <string name="reference_material_name3011">Reference Material Name</string>
+    <string name="reference_material_url3012">Reference Material URL</string>
+    <string name="title_activity_admin_reference_materials">AdminReferenceMaterials</string>
 </resources>
