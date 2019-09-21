@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="day_categories">
+        <item>---SELECT---</item>
+        <item>MONDAY</item>
+        <item>TUESDAY</item>
+        <item>WEDNESDAY</item>
+        <item>THURSDAY</item>
+        <item>FRIDAYy</item>
+        <item>SATURDAY</item>
+        <item>SUNDAY</item>
+    </string-array>
+</resources>

@@ -2,6 +2,7 @@ package com.example.studentmanagementsystem;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -59,4 +60,18 @@ public class TimeTableFirebase {
             }
         });
     }
+
+    public void addTimeTable(SubjectModel subjectModel, final DataStatus dataStatus){
+
+        String key = mReference.push().getKey();
+        mReference.child(key).setValue(subjectModel).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+
+                dataStatus.DataIsInserted();
+            }
+        });
+
+    }
+
 }

@@ -82,4 +82,6 @@
     <string name="delete_subject">DELETE</string>
     <string name="view_subject3000">VIEW</string>
     <string name="subjectId_format">Format Ex: Grade_11_SubjectName</string>
+    <string name="item">Item</string>
+    <string name="new_time_table">NEW TIME TABLE</string>
 </resources>
