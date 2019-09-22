@@ -57,7 +57,8 @@
     <string name="title_activity_admin_papers">AdminPapers</string>
     <string name="choose3009">CHOOSE</string>
     <string name="reference_materials_id3010">Reference Materials ID</string>
-    <string name="reference_material_name3011">Reference Material Name</string>
+    <string name="reference_material_title3011">Reference Material Title</string>
     <string name="reference_material_url3012">Reference Material URL</string>
     <string name="title_activity_admin_reference_materials">AdminReferenceMaterials</string>
+    <string name="upload3015">UPLOAD</string>
 </resources>
