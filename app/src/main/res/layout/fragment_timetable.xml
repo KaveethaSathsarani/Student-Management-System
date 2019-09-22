@@ -7,34 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".Profile">
 
-    <TextView
-        android:id="@+id/selectId_3000"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="92dp"
-        android:text="@string/select_id3000"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/viewTimetableId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
-        android:layout_marginEnd="72dp"
-        android:text="@string/viewTimetable"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/selectIdSpinner_3000"
-        android:layout_width="195dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/studentrecycleview"
+        android:layout_width="408dp"
+        android:layout_height="688dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="43dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

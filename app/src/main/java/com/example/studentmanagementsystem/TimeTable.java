@@ -1,25 +1,50 @@
 package com.example.studentmanagementsystem;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+//import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.List;
 
 
 public class TimeTable extends Fragment {
 
-    Button b1;
+    //Button b1;
+
+    private View TimeTableView;
+    private RecyclerView SubjectTimeTableList;
+    private DatabaseReference Subjectref, tref;
+    //private FirebaseAuth mAuth;
+    private String currentsubId;
 
 
     @Override
     public View onCreateView( LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
-        View v =  inflater.inflate(R.layout.fragment_timetable, container,false);
 
-        b1 = v.findViewById(R.id.viewTimetableId);
+        TimeTableView = inflater.inflate(R.layout.fragment_timetable, container,false);
+
+        /*b1 = v.findViewById(R.id.viewTimetableId);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,12 +58,142 @@ public class TimeTable extends Fragment {
 
 
             }
-        });
+        });*/
 
+        SubjectTimeTableList = (RecyclerView) TimeTableView.findViewById(R.id.studentrecycleview);
+        SubjectTimeTableList.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        return v;
+        //mAuth = FirebaseAuth.getInstance();
+        //currentsubId = mAuth.getCurrentUser().getUid();
 
+        Subjectref = FirebaseDatabase.getInstance().getReference().child("SubjectModel");
+        //tref = FirebaseDatabase.getInstance().getReference().child("users");
+
+    return TimeTableView;
 
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        FirebaseRecyclerOptions options = new FirebaseRecyclerOptions.Builder<SubjectModel>().setQuery(Subjectref, SubjectModel.class).build();
+
+        FirebaseRecyclerAdapter<SubjectModel,SubjectsViewHolder> adapter = new FirebaseRecyclerAdapter<SubjectModel, SubjectsViewHolder>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull final SubjectsViewHolder holder, int position, @NonNull SubjectModel subjectModel) {
+
+                String ids = getRef(position).getKey();
+                Subjectref.child(ids).addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        //if(dataSnapshot.hasChildren("image")){
+
+                        //}
+
+                        String ssubId = dataSnapshot.child("subId").getValue().toString();
+                        String ssubName = dataSnapshot.child("subName").getValue().toString();
+                        String steacherName = dataSnapshot.child("teacherName").getValue().toString();
+                        String svenue = dataSnapshot.child("venue").getValue().toString();
+                        String sday = dataSnapshot.child("day").getValue().toString();
+                        String stime = dataSnapshot.child("time").getValue().toString();
+
+                        holder.subId.setText(ssubId);
+                        holder.subName.setText(ssubName);
+                        holder.teacherName.setText(steacherName);
+                        holder.venue.setText(svenue);
+                        holder.day.setText(sday);
+                        holder.time.setText(stime);
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+
+            @NonNull
+            @Override
+            public SubjectsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+
+                View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.student_timetable_list_item, viewGroup, false);
+
+                SubjectsViewHolder viewHolder = new SubjectsViewHolder(view);
+
+                return viewHolder;
+
+            }
+
+        };
+
+        SubjectTimeTableList.setAdapter(adapter);
+        adapter.startListening();
+
+    }
+
+    public static class SubjectsViewHolder extends RecyclerView.ViewHolder{
+
+        TextView subId,subName,teacherName,venue,day,time;
+
+        public SubjectsViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            subId = itemView.findViewById(R.id.textView30);
+            subName = itemView.findViewById(R.id.textView40);
+            teacherName = itemView.findViewById(R.id.textView41);
+            venue = itemView.findViewById(R.id.textView44);
+            day = itemView.findViewById(R.id.textView42);
+            time = itemView.findViewById(R.id.textView43);
+
+        }
+    }
+
+
+
+    /*public void onViewCreated(View view, Bundle savedInstanceState) {
+       super.onViewCreated(view, savedInstanceState);
+       this.v = view;
+        init();
+       //setContentView(R.layout.fragment_timetable);
+   }*/
+
+
+    /*public void init() {
+       mRecyclerView = (RecyclerView)v.findViewById(R.id.studentrecycleview);
+        mRecyclerView.setLayoutManager((new LinearLayoutManager(getContext())));
+
+       new TimeTableFirebase().viewTimeTable(new TimeTableFirebase.DataStatus() {
+
+           @Override
+           public void DataIsLoaded(List<SubjectModel> subjects, List<String> keys) {
+
+               new RecycleView_Student_TimeTable().setConfig(mRecyclerView, getParentFragment().getContext(), subjects, keys);
+
+
+           }
+
+           @Override
+           public void DataIsInserted() {
+
+           }
+
+           @Override
+           public void DataIsUpdated() {
+
+           }
+
+           @Override
+           public void DataIsDeleted() {
+
+           }
+
+       });
+
+   }*/
+
 }
 
