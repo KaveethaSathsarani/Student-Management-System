@@ -1,7 +1,9 @@
 package com.example.studentmanagementsystem;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -47,6 +49,24 @@ public class RecycleView_TimeTable {
             mVenue = (TextView) itemView.findViewById(R.id.view_venue);
             mDay = (TextView) itemView.findViewById(R.id.view_day);
             mTime = (TextView) itemView.findViewById(R.id.view_time);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Intent intent = new Intent(mContext, TimeTableDetails.class);
+                    intent.putExtra("key",key);
+                    intent.putExtra("subId",mSubId.getText().toString());
+                    intent.putExtra("subName",mSubName.getText().toString());
+                    intent.putExtra("teacherName",mTeacherName.getText().toString());
+                    intent.putExtra("venue",mVenue.getText().toString());
+                    intent.putExtra("day",mDay.getText().toString());
+                    intent.putExtra("time",mTime.getText().toString());
+
+                    mContext.startActivity(intent);
+
+                }
+            });
 
         }
 

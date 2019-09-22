@@ -74,4 +74,30 @@ public class TimeTableFirebase {
 
     }
 
+    public void updateTimeTable(String key, SubjectModel subjectModel, final DataStatus dataStatus){
+
+        mReference.child(key).setValue(subjectModel).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+
+                dataStatus.DataIsUpdated();
+
+            }
+        });
+
+    }
+
+    public void deleteTimeTable(String key, final DataStatus dataStatus){
+
+        mReference.child(key).setValue(null).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+
+                dataStatus.DataIsDeleted();
+
+            }
+        });
+
+    }
+
 }
