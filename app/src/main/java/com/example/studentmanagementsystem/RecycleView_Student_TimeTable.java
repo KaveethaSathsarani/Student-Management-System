@@ -42,12 +42,12 @@ public class RecycleView_Student_TimeTable{
 
             super(LayoutInflater.from(mContext).inflate(R.layout.student_timetable_list_item, parent,false));
 
-            mSubId = (TextView) itemView.findViewById(R.id.textView30);
-            mSubName = (TextView) itemView.findViewById(R.id.textView40);
-            mTeacherName = (TextView) itemView.findViewById(R.id.textView41);
-            mVenue = (TextView) itemView.findViewById(R.id.textView44);
-            mDay = (TextView) itemView.findViewById(R.id.textView42);
-            mTime = (TextView) itemView.findViewById(R.id.textView43);
+            mSubId = (TextView) itemView.findViewById(R.id.studentView_subId);
+            mSubName = (TextView) itemView.findViewById(R.id.studentView_subName);
+            mTeacherName = (TextView) itemView.findViewById(R.id.studentView_teacherName);
+            mVenue = (TextView) itemView.findViewById(R.id.studentView_Venue);
+            mDay = (TextView) itemView.findViewById(R.id.studentView_day);
+            mTime = (TextView) itemView.findViewById(R.id.studentView_startTime);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

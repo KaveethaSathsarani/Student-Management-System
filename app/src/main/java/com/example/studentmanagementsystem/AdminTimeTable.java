@@ -30,7 +30,7 @@ import java.util.List;
 
 public class AdminTimeTable extends AppCompatActivity {
 
-    EditText subId,subName,time,teacherName,venue,day,viewSubId,viewSubName,viewTeacherName,viewVenue,viewDay,viewTime;
+    /*ditText subId,subName,time,teacherName,venue,day,viewSubId,viewSubName,viewTeacherName,viewVenue,viewDay,viewTime;
     Button add_subject,viewTimetable_2;
     //Button add_data3000;
     //FirebaseDatabase database;
@@ -100,7 +100,7 @@ public class AdminTimeTable extends AppCompatActivity {
         });*/
 
 
-        add_subject.setOnClickListener(new View.OnClickListener() {
+        /*add_subject.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -179,7 +179,7 @@ public class AdminTimeTable extends AppCompatActivity {
             }
         });
 
-    }
+    }*/
 
 
 }

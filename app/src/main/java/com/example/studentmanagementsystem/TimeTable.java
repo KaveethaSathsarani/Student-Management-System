@@ -1,18 +1,13 @@
 package com.example.studentmanagementsystem;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,8 +19,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import java.util.List;
 
 
 public class TimeTable extends Fragment {
@@ -73,7 +66,7 @@ public class TimeTable extends Fragment {
 
     }
 
-    @Override
+
     public void onStart() {
         super.onStart();
 
@@ -142,12 +135,12 @@ public class TimeTable extends Fragment {
         public SubjectsViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            subId = itemView.findViewById(R.id.textView30);
-            subName = itemView.findViewById(R.id.textView40);
-            teacherName = itemView.findViewById(R.id.textView41);
-            venue = itemView.findViewById(R.id.textView44);
-            day = itemView.findViewById(R.id.textView42);
-            time = itemView.findViewById(R.id.textView43);
+            subId = itemView.findViewById(R.id.studentView_subId);
+            subName = itemView.findViewById(R.id.studentView_subName);
+            teacherName = itemView.findViewById(R.id.studentView_teacherName);
+            venue = itemView.findViewById(R.id.studentView_Venue);
+            day = itemView.findViewById(R.id.studentView_day);
+            time = itemView.findViewById(R.id.studentView_startTime);
 
         }
     }
