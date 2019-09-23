@@ -3,6 +3,7 @@ package com.example.studentmanagementsystem;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -35,6 +36,7 @@ public class RecycleView_TimeTable {
         private TextView mVenue;
         private TextView mDay;
         private TextView mTime;
+        private TextView mEndtime;
 
         private String key;
 
@@ -49,6 +51,7 @@ public class RecycleView_TimeTable {
             mVenue = (TextView) itemView.findViewById(R.id.adminView_Venue);
             mDay = (TextView) itemView.findViewById(R.id.adminView_day);
             mTime = (TextView) itemView.findViewById(R.id.adminView_startTime);
+            mEndtime = (TextView) itemView.findViewById(R.id.adminView_endTime);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -62,6 +65,7 @@ public class RecycleView_TimeTable {
                     intent.putExtra("venue",mVenue.getText().toString());
                     intent.putExtra("day",mDay.getText().toString());
                     intent.putExtra("time",mTime.getText().toString());
+                    intent.putExtra("endtime",mEndtime.getText().toString());
 
                     mContext.startActivity(intent);
 
@@ -78,6 +82,7 @@ public class RecycleView_TimeTable {
             mVenue.setText(subjectModel.getVenue());
             mDay.setText(subjectModel.getDay());
             mTime.setText(subjectModel.getTime());
+            mEndtime.setText(subjectModel.getEndtime());
             this.key = key;
 
         }
@@ -112,5 +117,6 @@ public class RecycleView_TimeTable {
             return mSubjectList.size();
         }
     }
+
 
 }

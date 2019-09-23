@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="endtime_categories">
+        <item>---SELECT---</item>
+        <item>6:00 A.M</item>
+        <item>6:30 A.M</item>
+        <item>7:00 A.M</item>
+        <item>7:30 A.M</item>
+        <item>8:00 A.M</item>
+        <item>8:30 A.M</item>
+        <item>9:00 A.M</item>
+        <item>9:30 A.M</item>
+        <item>10:00 A.M</item>
+        <item>10:30 A.M</item>
+        <item>11:00 A.M</item>
+        <item>11:30 A.M</item>
+        <item>12:00 P.M</item>
+        <item>12:30 P.M</item>
+        <item>1:00 P.M</item>
+        <item>1:30 P.M</item>
+        <item>2:00 P.M</item>
+        <item>2:30 P.M</item>
+        <item>3:00 P.M</item>
+        <item>3:30 P.M</item>
+        <item>4:00 P.M</item>
+        <item>4:30 P.M</item>
+        <item>5:00 P.M</item>
+        <item>5:30 P.M</item>
+        <item>6:00 P.M</item>
+        <item>6:30 P.M</item>
+        <item>7:00 P.M</item>
+        <item>7:30 P.M</item>
+        <item>8:00 P.M</item>
+    </string-array>
+</resources>

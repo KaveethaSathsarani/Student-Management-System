@@ -5,16 +5,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.DownloadManager;
 import android.content.Intent;
+import android.graphics.ColorSpace;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SearchView;
 
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+
+import java.util.ArrayList;
 import java.util.List;
 
-public class AdminTimeTableList extends AppCompatActivity {
+public class AdminTimeTableList extends AppCompatActivity{
 
     private RecyclerView mRecyclerView;
+
+    private FirebaseDatabase mDatabase;
+    private DatabaseReference mReference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +70,8 @@ public class AdminTimeTableList extends AppCompatActivity {
 
         getMenuInflater().inflate(R.menu.timetable_activity_menu, menu);
 
+        getMenuInflater().inflate(R.menu.timetable_toolbar_menu,menu);
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -74,4 +89,5 @@ public class AdminTimeTableList extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

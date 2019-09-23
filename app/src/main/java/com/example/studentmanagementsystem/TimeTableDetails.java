@@ -19,6 +19,7 @@ public class TimeTableDetails extends AppCompatActivity {
     private EditText mVenue_editText;
     private Spinner mday_categories_spinner;
     private Spinner mtime_categories_spinner;
+    private Spinner mendtime_categories_spinner;
 
     private Button mUpdate_btn;
     private Button mDelete_btn;
@@ -31,6 +32,7 @@ public class TimeTableDetails extends AppCompatActivity {
     private String venue;
     private String day;
     private String time;
+    private String endtime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,7 @@ public class TimeTableDetails extends AppCompatActivity {
         venue = getIntent().getStringExtra("venue");
         day = getIntent().getStringExtra("day");
         time = getIntent().getStringExtra("time");
+        endtime = getIntent().getStringExtra("endtime");
 
         mSubId_editText = (EditText) findViewById(R.id.subId_edit);
         mSubId_editText.setText(subId);
@@ -55,9 +58,11 @@ public class TimeTableDetails extends AppCompatActivity {
         mVenue_editText.setText(venue);
         mday_categories_spinner = (Spinner) findViewById(R.id.day_edit);
         mtime_categories_spinner = (Spinner) findViewById(R.id.time_edit);
+        mendtime_categories_spinner = (Spinner) findViewById(R.id.endtime_edit);
 
         mday_categories_spinner.setSelection(getIndex_SpinnerItem(mday_categories_spinner, day));
         mtime_categories_spinner.setSelection(getIndex_SpinnerItem(mtime_categories_spinner, time));
+        mendtime_categories_spinner.setSelection(getIndex_SpinnerItem(mendtime_categories_spinner, endtime));
 
         mUpdate_btn = (Button) findViewById(R.id.updatetimetable);
         mDelete_btn = (Button) findViewById(R.id.deletetimetable);
@@ -74,6 +79,7 @@ public class TimeTableDetails extends AppCompatActivity {
                 subjectModel.setVenue(mVenue_editText.getText().toString());
                 subjectModel.setDay(mday_categories_spinner.getSelectedItem().toString());
                 subjectModel.setTime(mtime_categories_spinner.getSelectedItem().toString());
+                subjectModel.setEndtime(mendtime_categories_spinner.getSelectedItem().toString());
 
                 new TimeTableFirebase().updateTimeTable(key, subjectModel, new TimeTableFirebase.DataStatus() {
                     @Override

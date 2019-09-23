@@ -3,6 +3,8 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/abhaya_libre_semibold</item>
         <item>@font/abril_fatface</item>
+        <item>@font/aclonica</item>
+        <item>@font/advent_pro_thin</item>
         <item>@font/aguafina_script</item>
         <item>@font/alice</item>
         <item>@font/almendra_bold_italic</item>
@@ -12,6 +14,7 @@
         <item>@font/baloo_da</item>
         <item>@font/berkshire_swash</item>
         <item>@font/bungee_shade</item>
+        <item>@font/cabin_semibold</item>
         <item>@font/calligraffitti</item>
         <item>@font/cinzel_decorative</item>
         <item>@font/condiment</item>

@@ -4,6 +4,7 @@ public class SubjectModel {
     private String subId;
     private String subName;
     private String time;
+    private String endtime;
     private String teacherName;
     private String venue;
     private String day;
@@ -11,13 +12,14 @@ public class SubjectModel {
 
     }
 
-    public SubjectModel(String subId, String subName, String teacherName, String venue, String day, String time) {
+    public SubjectModel(String subId, String subName, String teacherName, String venue, String day, String time, String endtime) {
         this.subId = subId;
         this.subName = subName;
         this.teacherName = teacherName;
         this.venue = venue;
         this.day = day;
         this.time = time;
+        this.endtime = endtime;
     }
 
 
@@ -68,6 +70,14 @@ public class SubjectModel {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    public String getEndtime() {
+        return endtime;
+    }
+
+    public void setEndtime(String endtime) {
+        this.endtime = endtime;
     }
 
 
