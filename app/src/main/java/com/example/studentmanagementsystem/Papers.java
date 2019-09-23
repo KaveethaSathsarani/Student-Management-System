@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.studentmanagementsystem.ui.main.ListViewAdapterReferenceMaterials;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -33,6 +34,7 @@ public class Papers extends Fragment {
     ListView myPDFListView;
     DatabaseReference databaseReference;
     List<RefferenceMaterialsModel> models;
+    ListViewAdapterReferenceMaterials adapter;
 
     @Nullable
     @Override
@@ -97,7 +99,7 @@ public class Papers extends Fragment {
                     uploads[i] = models.get(i).getName();
                 }
 
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, uploads);
+                adapter=new ListViewAdapterReferenceMaterials(getContext(),models);
                 myPDFListView.setAdapter(adapter);
 
             }
