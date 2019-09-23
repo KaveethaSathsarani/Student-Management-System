@@ -11,7 +11,6 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.example.studentmanagementsystem.R;
 import com.example.studentmanagementsystem.adminProfile.FragmentAdminProfile1;
 import com.example.studentmanagementsystem.adminProfile.FragmentAdminProfile2;
-import com.example.studentmanagementsystem.adminProfile.FragmentAdminProfile3;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to

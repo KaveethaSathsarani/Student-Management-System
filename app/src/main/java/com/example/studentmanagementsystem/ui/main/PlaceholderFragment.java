@@ -42,9 +42,9 @@ public class PlaceholderFragment extends Fragment {
         pageViewModel.setIndex(index);
     }
 
-    @Override
+  /*  @Override
     public View onCreateView(
-            @NonNull LayoutInflater inflater, ViewGroup container,
+       /*     @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_admin_profile1, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
@@ -55,5 +55,5 @@ public class PlaceholderFragment extends Fragment {
             }
         });
         return root;
-    }
+    }*/
 }

@@ -4,6 +4,8 @@ public class SubjectModel {
     private String subId;
     private String subName;
 
+
+
     public SubjectModel(String subId, String subName) {
         this.subId = subId;
         this.subName = subName;
