@@ -49,12 +49,12 @@ public class FragmentAdminProfile2 extends Fragment {
         create=(Button)view.findViewById(R.id.create);
         delete=(Button)view.findViewById(R.id.delete);
 
-        adminModel= new AdminModel();
 
         listViewAdmin = (ListView) view.findViewById(R.id.listViewStudent);
 
         adminModelList = new ArrayList<>();
 
+        adminModel= new AdminModel();
 
         dbrf= FirebaseDatabase.getInstance().getReference().child("AdminModel");
 
@@ -88,7 +88,7 @@ public class FragmentAdminProfile2 extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 for(DataSnapshot adminsnapshot : dataSnapshot.getChildren() ){
-                    AdminModel adminModel = dataSnapshot.getValue(AdminModel.class);
+                    AdminModel adminModel = adminsnapshot.getValue(AdminModel.class);
 
                     adminModelList.add(adminModel);
                 }
