@@ -16,17 +16,18 @@
         <activity
             android:name=".AdminReferenceMaterials"
             android:label="@string/title_activity_admin_reference_materials"
+            android:windowSoftInputMode="adjustResize"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".CardViewNotices" />
         <activity android:name=".AdminExam" />
         <activity
             android:name=".AdminNotices"
             android:label="@string/title_activity_admin_notices"
+            android:windowSoftInputMode="adjustResize"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".mainClass"
-            android:label="@string/app_name"
-            android:windowSoftInputMode="adjustUnspecified">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
