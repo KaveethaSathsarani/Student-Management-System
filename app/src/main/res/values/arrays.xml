@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="colors">
+        <item>@color/color_timetable1</item>
+        <item>@color/color_timetable2</item>
+    </array>
+
+</resources>

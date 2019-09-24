@@ -3,6 +3,8 @@ package com.example.studentmanagementsystem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DownloadManager;
@@ -11,8 +13,12 @@ import android.graphics.ColorSpace;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.SearchView;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -20,13 +26,52 @@ import com.google.firebase.database.Query;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
-public class AdminTimeTableList extends AppCompatActivity{
+public class AdminTimeTableList extends AppCompatActivity implements SearchView.OnQueryTextListener,MenuItem.OnActionExpandListener{
 
     private RecyclerView mRecyclerView;
-
     private FirebaseDatabase mDatabase;
     private DatabaseReference mReference;
+
+    //private RecyclerView rv;
+    public ProgressBar mProgressBar;
+    private LinearLayoutManager layoutManager;
+    MyAdapter adapter;
+
+
+    EditText search_edit_text;
+
+    private void initializeViews(){
+
+        mProgressBar = findViewById(R.id.mProgressBarLoad);
+        mProgressBar.setIndeterminate(true);
+        mProgressBar.setVisibility(View.VISIBLE);
+        //mRecyclerView.setLayoutManager(layoutManager);
+        //DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(mRecyclerView.getContext(), layoutManager.getOrientation());
+        //mRecyclerView.addItemDecoration(dividerItemDecoration);
+        adapter = new MyAdapter(TimeTableUtils.DataCache);
+        mRecyclerView.setAdapter(adapter);
+
+    }
+
+    private void bindData(){
+
+        TimeTableUtils.select(this,TimeTableUtils.getDatabaseReference(),mProgressBar,mRecyclerView,adapter);
+
+    }
+
+    /*public boolean onCreateOptionsMenu(Menu menu){
+
+        getMenuInflater().inflate(R.menu.timetable_toolbar_menu,menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+        searchView.setOnQueryTextListener(this);
+        //searchView.setIconified(true);
+        searchView.setQueryHint("Search");
+        return true;
+
+    }*/
 
 
     @Override
@@ -34,7 +79,15 @@ public class AdminTimeTableList extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_timetable_list);
 
+        //initializeViews();
+        //bindData();
+
+        search_edit_text = (EditText) findViewById(R.id.subId_add);
+
         mRecyclerView = (RecyclerView) findViewById(R.id.recycleview_subjects);
+
+
+
         new TimeTableFirebase().viewTimeTable(new TimeTableFirebase.DataStatus(){
 
             @Override
@@ -70,7 +123,15 @@ public class AdminTimeTableList extends AppCompatActivity{
 
         getMenuInflater().inflate(R.menu.timetable_activity_menu, menu);
 
+        //getMenuInflater().inflate(R.menu.timetable_toolbar_menu,menu);
+
         getMenuInflater().inflate(R.menu.timetable_toolbar_menu,menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+        searchView.setOnQueryTextListener(this);
+        //searchView.setIconified(true);
+        searchView.setQueryHint("Search");
+
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -90,4 +151,28 @@ public class AdminTimeTableList extends AppCompatActivity{
         return super.onOptionsItemSelected(item);
     }
 
+
+
+    @Override
+    public boolean onMenuItemActionExpand(MenuItem item) {
+        return false;
+    }
+
+    @Override
+    public boolean onMenuItemActionCollapse(MenuItem imenuItem) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String query) {
+
+        TimeTableUtils.searchString = query;
+        TimeTableUtils.search(this, TimeTableUtils.getDatabaseReference(), mProgressBar, adapter, query);
+        return false;
+    }
 }

@@ -45,12 +45,10 @@ public class AddTimeTable extends AppCompatActivity {
 
         //EditText etUserName = (EditText) findViewById(R.id.txtUsername);
 
-
         mAdd_btn = (Button) findViewById(R.id.addtimetable);
         mBack_btn = (Button) findViewById(R.id.back_timeTable);
 
         ref = FirebaseDatabase.getInstance().getReference().child("SubjectModel");
-
 
 
         mAdd_btn.setOnClickListener(new View.OnClickListener() {
@@ -67,6 +65,8 @@ public class AddTimeTable extends AppCompatActivity {
                 subjectModel.setTime(mtime_categories_spinner.getSelectedItem().toString());
                 subjectModel.setEndtime(mendtime_categories_spinner.getSelectedItem().toString());
 
+                //Validating The Text Fields
+
                 String mSubId_addValid = mSubId_editText.getText().toString();
 
                 if(TextUtils.isEmpty(mSubId_addValid)) {
@@ -81,20 +81,21 @@ public class AddTimeTable extends AppCompatActivity {
                     return;
                 }
 
-                String  mTeacherName_addValid = mTeacherName_editText.getText().toString();
+                String mTeacherName_addValid = mTeacherName_editText.getText().toString();
 
                 if(TextUtils.isEmpty(mTeacherName_addValid)) {
                     mTeacherName_editText.setError("Field is Empty");
                     return;
                 }
 
-                String   mVenue_addValid = mVenue_editText.getText().toString();
+                String mVenue_addValid = mVenue_editText.getText().toString();
 
                 if(TextUtils.isEmpty(mVenue_addValid)) {
                     mVenue_editText.setError("Field is Empty");
                     return;
                 }
 
+                //Validating the Spinners
 
                 int daySpinner = mday_categories_spinner.getSelectedItemPosition();
 
@@ -108,6 +109,7 @@ public class AddTimeTable extends AppCompatActivity {
                     return;
                 }
 
+
                 int startTimeSpinner = mtime_categories_spinner.getSelectedItemPosition();
 
                 if(startTimeSpinner!=0)
@@ -120,6 +122,7 @@ public class AddTimeTable extends AppCompatActivity {
                     return;
                 }
 
+
                 int endTimeSpinner = mendtime_categories_spinner.getSelectedItemPosition();
 
                 if(endTimeSpinner!=0)
@@ -131,6 +134,8 @@ public class AddTimeTable extends AppCompatActivity {
                             "Please Select The End Time!", Toast.LENGTH_LONG).show();
                     return;
                 }
+
+
 
                 ref.child(mSubId_editText.getText().toString()).setValue(subjectModel);
                 Toast.makeText(getApplicationContext(),"Succesfully Data Inserted",Toast.LENGTH_SHORT).show();

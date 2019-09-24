@@ -3,6 +3,7 @@ package com.example.studentmanagementsystem;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -80,6 +81,76 @@ public class TimeTableDetails extends AppCompatActivity {
                 subjectModel.setDay(mday_categories_spinner.getSelectedItem().toString());
                 subjectModel.setTime(mtime_categories_spinner.getSelectedItem().toString());
                 subjectModel.setEndtime(mendtime_categories_spinner.getSelectedItem().toString());
+
+                //Validating The Text Fields
+
+                String mSubId_editValid = mSubId_editText.getText().toString();
+
+                if(TextUtils.isEmpty(mSubId_editValid)) {
+                    mSubId_editText.setError("Field is Empty");
+                    return;
+                }
+
+                String mSubName_editValid = mSubName_editText.getText().toString();
+
+                if(TextUtils.isEmpty(mSubName_editValid)) {
+                    mSubName_editText.setError("Field is Empty");
+                    return;
+                }
+
+                String mTeacherName_editValid = mTeacherName_editText.getText().toString();
+
+                if(TextUtils.isEmpty(mTeacherName_editValid)) {
+                    mTeacherName_editText.setError("Field is Empty");
+                    return;
+                }
+
+                String mVenue_editValid = mVenue_editText.getText().toString();
+
+                if(TextUtils.isEmpty(mVenue_editValid)) {
+                    mVenue_editText.setError("Field is Empty");
+                    return;
+                }
+
+
+                //Validating the Spinners
+
+                int dayeditSpinner = mday_categories_spinner.getSelectedItemPosition();
+
+                if(dayeditSpinner!=0)
+                {
+                    String dayedit = mday_categories_spinner.getSelectedItem().toString();
+                }
+                else{
+                    Toast.makeText(TimeTableDetails.this, "Please Select The Day!", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+
+                int startTimeeditSpinner = mtime_categories_spinner.getSelectedItemPosition();
+
+                if(startTimeeditSpinner!=0)
+                {
+                    String startTimeedit = mtime_categories_spinner.getSelectedItem().toString();
+                }
+                else{
+                    Toast.makeText(TimeTableDetails.this, "Please Select The Start Time!", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+
+                int endTimeeditSpinner = mendtime_categories_spinner.getSelectedItemPosition();
+
+                if(endTimeeditSpinner!=0)
+                {
+                    String endTimeedit = mendtime_categories_spinner.getSelectedItem().toString();
+                }
+                else{
+                    Toast.makeText(TimeTableDetails.this, "Please Select The End Time!", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+
 
                 new TimeTableFirebase().updateTimeTable(key, subjectModel, new TimeTableFirebase.DataStatus() {
                     @Override

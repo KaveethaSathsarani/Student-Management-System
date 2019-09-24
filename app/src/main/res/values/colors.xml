@@ -5,4 +5,8 @@
     <color name="colorAccent">#FFFFFF</color>
     <color name="primaryColour">#88E7FC</color>
     <color name="formBackground">#46808382</color>
+    
+    <color name="color_timetable1">#DB4437</color>
+    <color name="color_timetable2">#4285F4</color>
+
 </resources>

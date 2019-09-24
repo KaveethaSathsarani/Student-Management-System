@@ -1,6 +1,8 @@
 package com.example.studentmanagementsystem;
 
-public class SubjectModel {
+import java.io.Serializable;
+
+public class SubjectModel implements Serializable {
     private String subId;
     private String subName;
     private String time;
@@ -13,6 +15,13 @@ public class SubjectModel {
     }
 
     public SubjectModel(String subId, String subName, String teacherName, String venue, String day, String time, String endtime) {
+
+        if(subId.trim().equals("")){
+
+            subId = "Subject Id Not Found";
+
+        }
+
         this.subId = subId;
         this.subName = subName;
         this.teacherName = teacherName;

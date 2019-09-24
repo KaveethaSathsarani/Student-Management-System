@@ -6,16 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".AdminTimeTableList">
 
+    <ProgressBar
+        android:id="@+id/mProgressBarLoad"
+        android:layout_width="403dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="8dp"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleview_subjects"
-        android:layout_width="400dp"
-        android:layout_height="719dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="397dp"
+        android:layout_height="687dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.714" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
