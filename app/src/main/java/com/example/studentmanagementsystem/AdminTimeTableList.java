@@ -33,45 +33,10 @@ public class AdminTimeTableList extends AppCompatActivity implements SearchView.
     private RecyclerView mRecyclerView;
     private FirebaseDatabase mDatabase;
     private DatabaseReference mReference;
-
-    //private RecyclerView rv;
-    public ProgressBar mProgressBar;
     private LinearLayoutManager layoutManager;
     MyAdapter adapter;
 
-
     EditText search_edit_text;
-
-    private void initializeViews(){
-
-        mProgressBar = findViewById(R.id.mProgressBarLoad);
-        mProgressBar.setIndeterminate(true);
-        mProgressBar.setVisibility(View.VISIBLE);
-        //mRecyclerView.setLayoutManager(layoutManager);
-        //DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(mRecyclerView.getContext(), layoutManager.getOrientation());
-        //mRecyclerView.addItemDecoration(dividerItemDecoration);
-        adapter = new MyAdapter(TimeTableUtils.DataCache);
-        mRecyclerView.setAdapter(adapter);
-
-    }
-
-    private void bindData(){
-
-        TimeTableUtils.select(this,TimeTableUtils.getDatabaseReference(),mProgressBar,mRecyclerView,adapter);
-
-    }
-
-    /*public boolean onCreateOptionsMenu(Menu menu){
-
-        getMenuInflater().inflate(R.menu.timetable_toolbar_menu,menu);
-        MenuItem searchItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) searchItem.getActionView();
-        searchView.setOnQueryTextListener(this);
-        //searchView.setIconified(true);
-        searchView.setQueryHint("Search");
-        return true;
-
-    }*/
 
 
     @Override
@@ -79,14 +44,12 @@ public class AdminTimeTableList extends AppCompatActivity implements SearchView.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_timetable_list);
 
-        //initializeViews();
-        //bindData();
+        initializeViews();
+        bindData();
 
         search_edit_text = (EditText) findViewById(R.id.subId_add);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycleview_subjects);
-
-
 
         new TimeTableFirebase().viewTimeTable(new TimeTableFirebase.DataStatus(){
 
@@ -98,23 +61,33 @@ public class AdminTimeTableList extends AppCompatActivity implements SearchView.
             }
 
             @Override
-            public void DataIsInserted() {
-
-            }
+            public void DataIsInserted() { }
 
             @Override
-            public void DataIsUpdated() {
-
-            }
+            public void DataIsUpdated() { }
 
             @Override
-            public void DataIsDeleted() {
-
-            }
+            public void DataIsDeleted() { }
 
         });
 
+    }
 
+    private void initializeViews(){
+
+        mRecyclerView = findViewById(R.id.recycleview_subjects);
+        layoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(layoutManager);
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(mRecyclerView.getContext(), layoutManager.getOrientation());
+        mRecyclerView.addItemDecoration(dividerItemDecoration);
+        adapter = new MyAdapter(TimeTableUtils.DataCache);
+        mRecyclerView.setAdapter(adapter);
+
+    }
+
+    private void bindData(){
+
+        TimeTableUtils.select(this,TimeTableUtils.getDatabaseReference(),mRecyclerView,adapter);
 
     }
 
@@ -123,17 +96,16 @@ public class AdminTimeTableList extends AppCompatActivity implements SearchView.
 
         getMenuInflater().inflate(R.menu.timetable_activity_menu, menu);
 
-        //getMenuInflater().inflate(R.menu.timetable_toolbar_menu,menu);
-
         getMenuInflater().inflate(R.menu.timetable_toolbar_menu,menu);
+
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchItem.getActionView();
         searchView.setOnQueryTextListener(this);
         //searchView.setIconified(true);
         searchView.setQueryHint("Search");
 
-
         return super.onCreateOptionsMenu(menu);
+
     }
 
     @Override
@@ -151,28 +123,25 @@ public class AdminTimeTableList extends AppCompatActivity implements SearchView.
         return super.onOptionsItemSelected(item);
     }
 
-
-
     @Override
     public boolean onMenuItemActionExpand(MenuItem item) {
-        return false;
-    }
+        return false; }
 
     @Override
     public boolean onMenuItemActionCollapse(MenuItem imenuItem) {
-        return false;
-    }
+        return false; }
 
     @Override
     public boolean onQueryTextSubmit(String query) {
-        return false;
-    }
+        return false; }
 
     @Override
     public boolean onQueryTextChange(String query) {
 
         TimeTableUtils.searchString = query;
-        TimeTableUtils.search(this, TimeTableUtils.getDatabaseReference(), mProgressBar, adapter, query);
+        TimeTableUtils.search(this, TimeTableUtils.getDatabaseReference(),adapter, query);
         return false;
+
     }
+
 }

@@ -23,12 +23,9 @@ import com.google.firebase.database.ValueEventListener;
 
 public class TimeTable extends Fragment {
 
-    //Button b1;
-
     private View TimeTableView;
     private RecyclerView SubjectTimeTableList;
     private DatabaseReference Subjectref, tref;
-    //private FirebaseAuth mAuth;
     private String currentsubId;
 
 
@@ -37,30 +34,10 @@ public class TimeTable extends Fragment {
 
         TimeTableView = inflater.inflate(R.layout.fragment_timetable, container,false);
 
-        /*b1 = v.findViewById(R.id.viewTimetableId);
-
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                TimeTable2 timeTable2 = new TimeTable2();
-
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.timetableLayout, timeTable2);
-                transaction.commit();
-
-
-            }
-        });*/
-
         SubjectTimeTableList = (RecyclerView) TimeTableView.findViewById(R.id.studentrecycleview);
         SubjectTimeTableList.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        //mAuth = FirebaseAuth.getInstance();
-        //currentsubId = mAuth.getCurrentUser().getUid();
-
         Subjectref = FirebaseDatabase.getInstance().getReference().child("SubjectModel");
-        //tref = FirebaseDatabase.getInstance().getReference().child("users");
 
     return TimeTableView;
 
@@ -80,10 +57,6 @@ public class TimeTable extends Fragment {
                 Subjectref.child(ids).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                        //if(dataSnapshot.hasChildren("image")){
-
-                        //}
 
                         String ssubId = dataSnapshot.child("subId").getValue().toString();
                         String ssubName = dataSnapshot.child("subName").getValue().toString();
@@ -145,48 +118,6 @@ public class TimeTable extends Fragment {
         }
     }
 
-
-
-    /*public void onViewCreated(View view, Bundle savedInstanceState) {
-       super.onViewCreated(view, savedInstanceState);
-       this.v = view;
-        init();
-       //setContentView(R.layout.fragment_timetable);
-   }*/
-
-
-    /*public void init() {
-       mRecyclerView = (RecyclerView)v.findViewById(R.id.studentrecycleview);
-        mRecyclerView.setLayoutManager((new LinearLayoutManager(getContext())));
-
-       new TimeTableFirebase().viewTimeTable(new TimeTableFirebase.DataStatus() {
-
-           @Override
-           public void DataIsLoaded(List<SubjectModel> subjects, List<String> keys) {
-
-               new RecycleView_Student_TimeTable().setConfig(mRecyclerView, getParentFragment().getContext(), subjects, keys);
-
-
-           }
-
-           @Override
-           public void DataIsInserted() {
-
-           }
-
-           @Override
-           public void DataIsUpdated() {
-
-           }
-
-           @Override
-           public void DataIsDeleted() {
-
-           }
-
-       });
-
-   }*/
 
 }
 

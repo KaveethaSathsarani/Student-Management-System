@@ -43,8 +43,6 @@ public class AddTimeTable extends AppCompatActivity {
         mtime_categories_spinner = (Spinner) findViewById(R.id.time_add);
         mendtime_categories_spinner = (Spinner) findViewById(R.id.endtime_add);
 
-        //EditText etUserName = (EditText) findViewById(R.id.txtUsername);
-
         mAdd_btn = (Button) findViewById(R.id.addtimetable);
         mBack_btn = (Button) findViewById(R.id.back_timeTable);
 
@@ -136,33 +134,8 @@ public class AddTimeTable extends AppCompatActivity {
                 }
 
 
-
                 ref.child(mSubId_editText.getText().toString()).setValue(subjectModel);
                 Toast.makeText(getApplicationContext(),"Succesfully Data Inserted",Toast.LENGTH_SHORT).show();
-
-
-                /*new TimeTableFirebase().addTimeTable(subjectModel, new TimeTableFirebase.DataStatus() {
-                    @Override
-                    public void DataIsLoaded(List<SubjectModel> subjects, List<String> keys) {
-
-                    }
-
-                    @Override
-                    public void DataIsInserted() {
-
-
-                    }
-
-                    @Override
-                    public void DataIsUpdated() {
-
-                    }
-
-                    @Override
-                    public void DataIsDeleted() {
-
-                    }
-                });*/
 
             }
         });
@@ -174,8 +147,6 @@ public class AddTimeTable extends AppCompatActivity {
             }
         });
 
-
     }
-
 
 }

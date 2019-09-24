@@ -33,7 +33,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        private final TextView subIdtxt, subNametxt;
+        private final TextView subIdtxt,subNametxt,teacherNametxt,venuetxt,daytxt,startTimetxt,endTimetxt;
         //private final MaterialLetterIcon mIcon;
         private ItemClickListener itemClickListener;
 
@@ -43,6 +43,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
             subIdtxt = itemView.findViewById(R.id.adminView_subId);
             subNametxt = itemView.findViewById(R.id.adminView_subName);
+            teacherNametxt = itemView.findViewById(R.id.adminView_subId);
+            venuetxt = itemView.findViewById(R.id.adminView_subName);
+            daytxt = itemView.findViewById(R.id.adminView_subId);
+            startTimetxt = itemView.findViewById(R.id.adminView_subName);
+            endTimetxt = itemView.findViewById(R.id.adminView_subName);
+
 
             itemView.setOnClickListener(this);
 
@@ -63,42 +69,31 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     }
 
-
-
     public MyAdapter(List<SubjectModel> subjectModel){
 
         this.subjectModel = subjectModel;
 
     }
 
-
-    private void prepareLetteIcons(Context c){
-
-        TypedValue mTypedValue = new TypedValue();
-
-        c.getTheme().resolveAttribute(R.attr.selectableItemBackground, mTypedValue, true);
-
-        mMaterialColours = c.getResources().getIntArray(R.array.colors);
-        mBackground = mTypedValue.resourceId;
-
-    }
-
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
 
         this.c = parent.getContext();
-        prepareLetteIcons(c);
         View view = LayoutInflater.from(c).inflate(R.layout.subject_list_item, parent, false);
-        //view.setOnBackgroungResource(mBackground);
         return new ViewHolder(view);
 
     }
 
     public void onBindViewHolder(ViewHolder holder, int position){
 
-        final SubjectModel s = subjectModel.get(position);
+        SubjectModel s = subjectModel.get(position);
 
         holder.subIdtxt.setText(s.getSubId());
         holder.subNametxt.setText(s.getSubName());
+        holder.teacherNametxt.setText(s.getSubId());
+        holder.venuetxt.setText(s.getSubName());
+        holder.daytxt.setText(s.getSubId());
+        holder.startTimetxt.setText(s.getSubName());
+        holder.endTimetxt.setText(s.getSubName());
 
 
         if(position%2 == 0 ){

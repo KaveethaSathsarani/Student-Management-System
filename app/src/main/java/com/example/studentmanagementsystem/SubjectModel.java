@@ -1,5 +1,7 @@
 package com.example.studentmanagementsystem;
 
+import com.google.firebase.database.Exclude;
+
 import java.io.Serializable;
 
 public class SubjectModel implements Serializable {
@@ -10,6 +12,8 @@ public class SubjectModel implements Serializable {
     private String teacherName;
     private String venue;
     private String day;
+
+    private String key;
     public SubjectModel(){
 
     }
@@ -30,7 +34,6 @@ public class SubjectModel implements Serializable {
         this.time = time;
         this.endtime = endtime;
     }
-
 
     public String getSubId() {
         return subId;
@@ -90,5 +93,14 @@ public class SubjectModel implements Serializable {
     }
 
 
+    @Exclude
+    public String getKey() {
+        return key;
+    }
+
+    @Exclude
+    public void setKey(String key) {
+        this.key = key;
+    }
 
 }
