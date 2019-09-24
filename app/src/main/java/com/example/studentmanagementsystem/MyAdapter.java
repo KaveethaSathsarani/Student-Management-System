@@ -4,19 +4,19 @@ import android.content.Context;
 import android.graphics.Color;
 import android.text.Spannable;
 import android.text.style.ForegroundColorSpan;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 import java.util.Locale;
 
-import static com.example.studentmanagementsystem.TimeTableUtils.searchString;
+import static com.example.studentmanagementsystem.TimeTableUtil.searchString;
+
+//import static com.example.studentmanagementsystem.TimeTableUtil.searchString;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 

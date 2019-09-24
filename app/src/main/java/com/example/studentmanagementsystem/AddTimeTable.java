@@ -49,6 +49,8 @@ public class AddTimeTable extends AppCompatActivity {
         ref = FirebaseDatabase.getInstance().getReference().child("SubjectModel");
 
 
+        //Implement the Add button to add new time table
+
         mAdd_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -139,6 +141,8 @@ public class AddTimeTable extends AppCompatActivity {
 
             }
         });
+
+        //Implementing the Back button
 
         mBack_btn.setOnClickListener(new View.OnClickListener() {
             @Override

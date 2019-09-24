@@ -20,12 +20,6 @@ public class SubjectModel implements Serializable {
 
     public SubjectModel(String subId, String subName, String teacherName, String venue, String day, String time, String endtime) {
 
-        if(subId.trim().equals("")){
-
-            subId = "Subject Id Not Found";
-
-        }
-
         this.subId = subId;
         this.subName = subName;
         this.teacherName = teacherName;

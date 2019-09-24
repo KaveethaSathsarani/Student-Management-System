@@ -12,7 +12,7 @@
         <activity android:name=".AddTimeTable"></activity>
         <activity android:name=".TimeTableDetails"></activity>
         <activity
-            android:name=".mainClass"
+            android:name=".AdminTimeTableList"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

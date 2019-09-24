@@ -1,34 +1,34 @@
 package com.example.studentmanagementsystem;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.DownloadManager;
 import android.content.Intent;
-import android.graphics.ColorSpace;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.SearchView;
 
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
-public class AdminTimeTableList extends AppCompatActivity implements SearchView.OnQueryTextListener,MenuItem.OnActionExpandListener{
+import static com.example.studentmanagementsystem.TimeTableUtil.DataCache;
+
+public class AdminTimeTableList extends AppCompatActivity implements SearchView.OnQueryTextListener,MenuItem.OnActionExpandListener {
+
 
     private RecyclerView mRecyclerView;
     private FirebaseDatabase mDatabase;
@@ -39,6 +39,7 @@ public class AdminTimeTableList extends AppCompatActivity implements SearchView.
     EditText search_edit_text;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,9 +48,12 @@ public class AdminTimeTableList extends AppCompatActivity implements SearchView.
         initializeViews();
         bindData();
 
-        search_edit_text = (EditText) findViewById(R.id.subId_add);
-
         mRecyclerView = (RecyclerView) findViewById(R.id.recycleview_subjects);
+
+
+        mDatabase = FirebaseDatabase.getInstance();
+
+        //mReference = mDatabase.getReference("SubjectModel");
 
         new TimeTableFirebase().viewTimeTable(new TimeTableFirebase.DataStatus(){
 
@@ -80,14 +84,14 @@ public class AdminTimeTableList extends AppCompatActivity implements SearchView.
         mRecyclerView.setLayoutManager(layoutManager);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(mRecyclerView.getContext(), layoutManager.getOrientation());
         mRecyclerView.addItemDecoration(dividerItemDecoration);
-        adapter = new MyAdapter(TimeTableUtils.DataCache);
+        adapter = new MyAdapter(DataCache);
         mRecyclerView.setAdapter(adapter);
 
     }
 
     private void bindData(){
 
-        TimeTableUtils.select(this,TimeTableUtils.getDatabaseReference(),mRecyclerView,adapter);
+        TimeTableUtil.select(this, TimeTableUtil.getDatabaseReference(),mRecyclerView,adapter);
 
     }
 
@@ -101,15 +105,15 @@ public class AdminTimeTableList extends AppCompatActivity implements SearchView.
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchItem.getActionView();
         searchView.setOnQueryTextListener(this);
-        //searchView.setIconified(true);
         searchView.setQueryHint("Search");
+
 
         return super.onCreateOptionsMenu(menu);
 
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()){
 
@@ -138,10 +142,11 @@ public class AdminTimeTableList extends AppCompatActivity implements SearchView.
     @Override
     public boolean onQueryTextChange(String query) {
 
-        TimeTableUtils.searchString = query;
-        TimeTableUtils.search(this, TimeTableUtils.getDatabaseReference(),adapter, query);
+        TimeTableUtil.searchString = query;
+        TimeTableUtil.search(this, TimeTableUtil.getDatabaseReference(),adapter, query);
         return false;
 
     }
+
 
 }

@@ -1,9 +1,7 @@
 package com.example.studentmanagementsystem;
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,12 +17,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Queue;
 
-public class TimeTableUtils {
+public class TimeTableUtil {
+
 
     public static List<SubjectModel> DataCache = new ArrayList<>();
     public static String searchString = "";
+
 
 
     public static void show(Context c,String message){
@@ -37,20 +36,21 @@ public class TimeTableUtils {
     public static DatabaseReference getDatabaseReference(){
 
         return FirebaseDatabase.getInstance().getReference();
+
     }
 
-    public static void search(final AppCompatActivity a, DatabaseReference db, final MyAdapter adapter, String searchTerm){
+    public static void search(final AppCompatActivity a, DatabaseReference db, final MyAdapter adapter, String searchText){
 
-        if(searchTerm != null && searchTerm.length()>0){
+        if(searchText != null && searchText.length()>0){
 
-            char[] letters = searchTerm.toCharArray();
+            char[] letters = searchText.toCharArray();
             String firstletter = String.valueOf(letters[0]).toUpperCase();
-            String remainingletters = searchTerm.substring(1);
-            searchTerm = firstletter+remainingletters;
+            String remainingletters = searchText.substring(1);
+            searchText = firstletter+remainingletters;
 
         }
 
-        Query firebaseSearchQuery = db.child("SubjectModel").orderByChild("subId").startAt(searchTerm).endAt(searchTerm+"\uf8ff");
+        Query firebaseSearchQuery = db.child("SubjectModel").orderByChild("subId").startAt(searchText).endAt(searchText+"\uf8ff");
 
         firebaseSearchQuery.addValueEventListener(new ValueEventListener() {
             @Override
@@ -72,7 +72,7 @@ public class TimeTableUtils {
 
                 } else{
 
-                    TimeTableUtils.show(a, "No Item Found");
+                    TimeTableUtil.show(a, "No Item Found");
 
                 }
 
@@ -82,7 +82,7 @@ public class TimeTableUtils {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
                 Log.d("FIREBASE CRUD", databaseError.getMessage());
-                TimeTableUtils.show(a,databaseError.getMessage());
+                TimeTableUtil.show(a,databaseError.getMessage());
 
             }
         });
@@ -112,7 +112,7 @@ public class TimeTableUtils {
 
                 } else{
 
-                    TimeTableUtils.show(a, "Not Found");
+                    TimeTableUtil.show(a, "Not Found");
 
                 }
 
@@ -122,7 +122,7 @@ public class TimeTableUtils {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
                 Log.d("FIREBASE CRUD", databaseError.getMessage());
-                TimeTableUtils.show(a,databaseError.getMessage());
+                TimeTableUtil.show(a,databaseError.getMessage());
 
             }
         });
