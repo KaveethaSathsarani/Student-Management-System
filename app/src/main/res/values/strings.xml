@@ -83,5 +83,10 @@
     <string name="create1">Create</string>
     <string name="admin_name">Admin Name</string>
     <string name="admin_id">Admin Id</string>
+    <string name="sign_in_as_student">SIGN IN AS STUDENT</string>
+    <string name="sign_in_as_admin">SIGN IN AS ADMIN</string>
+    <string name="dd_mm_yyyy">dd-mm-yyyy</string>
+    <string name="background">background</string>
+    <string name="search">search</string>
 
 </resources>
