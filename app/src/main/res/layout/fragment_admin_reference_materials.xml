@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:paddingStart="10dp"
+    android:paddingEnd="5dp"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.PlaceholderFragmentReferenceMaterials">
+
+    <TextView
+        android:id="@+id/admin_referenceMaterials"
+        android:layout_width="373dp"
+        android:layout_height="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <ListView
+        android:id="@+id/listView_papers"
+        android:layout_width="407dp"
+        android:layout_height="600dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin_referenceMaterials"
+        app:layout_constraintVertical_bias="1.0" />
+<!--
+    <EditText
+        android:id="@+id/search_text"
+        android:layout_width="368dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="7dp"
+        android:ems="10"
+        android:hint="Search Here....."
+        app:layout_constraintBottom_toTopOf="@+id/listView_papers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin_referenceMaterials" />
+
+-->
+</androidx.constraintlayout.widget.ConstraintLayout>
