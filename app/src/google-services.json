@@ -1,0 +1,72 @@
+{
+  "project_info": {
+    "project_number": "584951129698",
+    "firebase_url": "https://studentmanagementsystem-4106d.firebaseio.com",
+    "project_id": "studentmanagementsystem-4106d",
+    "storage_bucket": "studentmanagementsystem-4106d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584951129698:android:57223e4c63cf362e5c933b",
+        "android_client_info": {
+          "package_name": "com.example.studentmanagementsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584951129698-5te58l5ban96u08pfs8pb289g1iegmcc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studentmanagementsystem",
+            "certificate_hash": "87df372c25e8a6564e3301e3317fe5c5cc770944"
+          }
+        },
+        {
+          "client_id": "584951129698-7t6tlc1t4b5jj411ulni1fu4061j8nvh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studentmanagementsystem",
+            "certificate_hash": "c828502017d2b620b3c924f48eae75b7739cfd91"
+          }
+        },
+        {
+          "client_id": "584951129698-k6gds1oml0uduq8ig4eibb1ug9i0d3v6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studentmanagementsystem",
+            "certificate_hash": "67078379a57781821a4c7d45b5b6a7d08de8fcaa"
+          }
+        },
+        {
+          "client_id": "584951129698-61fak6u1201qhe2pvoua8omjuar5u8p7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studentmanagementsystem",
+            "certificate_hash": "b6359a90359b2c96f3b3bfa4ec1b5fdab2098a70"
+          }
+        },
+        {
+          "client_id": "584951129698-0k7ksbgarks81b11p2fp08d4kguic297.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtcUn-W_4LDEe1wMP3jCsegby-FF7hvJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584951129698-0k7ksbgarks81b11p2fp08d4kguic297.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
