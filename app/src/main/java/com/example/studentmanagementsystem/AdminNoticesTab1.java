@@ -1,11 +1,9 @@
 package com.example.studentmanagementsystem;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -24,30 +22,32 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import static android.widget.Toast.makeText;
 
-public class Notifications extends Fragment {
+public class AdminNoticesTab1 extends Fragment {
 
-    private RecyclerView noticeList;
+    RecyclerView noticeList;
     private DatabaseReference reference;
-    private ArrayList<NoticesModel> list;
-    private RecyclerViewAdapterNotices adapter;
+    ArrayList<NoticesModel> list;
+    RecyclerViewAdapterNotices adapter;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_notifiction, container,false);
 
-        noticeList=rootView.findViewById(R.id.noticeRecyclerView2);
-        //noticeList.setHasFixedSize(true);
+        final View view= inflater.inflate(R.layout.fragment_admin_notices,container,false);
+
+        noticeList=(RecyclerView)view.findViewById(R.id.noticeRecyclerView);
         noticeList.setHasFixedSize(true);
         noticeList.setLayoutManager(new LinearLayoutManager(getContext()));
-        list=new ArrayList<>();
+        list=new ArrayList<NoticesModel>();
 
-        reference= FirebaseDatabase.getInstance().getReference("NoticesModel");
+        reference=FirebaseDatabase.getInstance().getReference("NoticesModel");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
+
                     list.clear();
                     for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
 
@@ -57,19 +57,38 @@ public class Notifications extends Fragment {
 
                     adapter=new RecyclerViewAdapterNotices(getContext(),list);
                     noticeList.setAdapter(adapter);
+
                 }
 
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(getContext(),"Something went wrong....",Toast.LENGTH_LONG).show();
+                makeText(getContext(),"Something went wrong....",Toast.LENGTH_LONG).show();
             }
         });
 
 
-        return rootView;
+
+
+        return view;
+
 
     }
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
 

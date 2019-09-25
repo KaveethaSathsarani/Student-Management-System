@@ -4,9 +4,12 @@ public class AdminModel {
     private  String adminID;
     private String name;
     private String password;
+
+
     public AdminModel(){
 
     }
+
     public AdminModel(String adminID, String name, String password) {
         this.adminID = adminID;
         this.name = name;

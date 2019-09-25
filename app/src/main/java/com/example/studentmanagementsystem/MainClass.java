@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -85,13 +86,22 @@ public class MainClass extends AppCompatActivity implements BottomNavigationView
                 fragment = new TimeTable();
                 break;
 
-            case R.id.notification_button:
-                fragment = new Notifications();
-                break;
 
         }
         return loadFragment(fragment);
     }
 
+    public void callNotices(View view) {
+
+
+        Fragment fragment;
+
+        if (view == findViewById(R.id.notification_button)) {
+           // Log.i("Info","notification button clicked");
+            fragment = new Notifications();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+
+        }
+    }
 
 }

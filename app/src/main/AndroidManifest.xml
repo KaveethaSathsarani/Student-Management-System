@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.studentmanagementsystem">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,6 +17,19 @@
         </activity>
         <activity android:name=".Splash"></activity>
         <activity
+            android:name=".AdminReferenceMaterials"
+            android:label="@string/title_activity_admin_reference_materials"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".CardViewNotices" />
+        <activity android:name=".AdminExam" />
+        <activity android:name=".Admin_Profile" />
+        <activity android:name=".login1"></activity>
+        <activity
+            android:name=".AdminNotices"
+            android:label="@string/title_activity_admin_notices"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar" />
             android:name=".Admin_Profile"
             android:label="@string/title_activity_admin__profile"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -22,7 +39,7 @@
             android:label="@string/app_name" />
         <activity android:name=".MainClass" />
         <activity
-            android:name=".login1"
+            android:name=".Splash"
             android:label="Study Lab"
             android:logo="@drawable/logo">
             <intent-filter>
@@ -33,7 +50,7 @@
 
 
         </activity>
-        
+
         <activity
             android:name=".AdminExamView"
             android:label="@string/title_activity_my">

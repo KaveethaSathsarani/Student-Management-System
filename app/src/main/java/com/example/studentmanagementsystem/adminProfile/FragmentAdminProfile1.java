@@ -21,7 +21,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.studentmanagementsystem.DBHandlers.StudentModel;
 import com.example.studentmanagementsystem.R;
-import com.example.studentmanagementsystem.adapters.StudentList;
+//import com.example.studentmanagementsystem.adapters.StudentList;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
