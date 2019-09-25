@@ -3,6 +3,9 @@ package com.example.studentmanagementsystem;
 public class SubjectModel {
     private String subId;
     private String subName;
+    public SubjectModel(){
+
+    }
 
     public SubjectModel(String subId, String subName) {
         this.subId = subId;

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="422dp"
+        android:layout_height="234dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/etExamName2"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="@string/examName1006" />
+
+        <TextView
+            android:id="@+id/etExamId2"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="@string/examId1000" />
+
+        <TextView
+            android:id="@+id/etExamGrade2"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="@string/grade1008" />
+
+        <TextView
+            android:id="@+id/etExamTime2"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="@string/examTime1015" />
+
+        <TextView
+            android:id="@+id/etExamVenue2"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            tools:text="@string/examVenue1016" />
+
+        <TextView
+            android:id="@+id/etExamDate2"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            tools:text="@string/examDate1017" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
