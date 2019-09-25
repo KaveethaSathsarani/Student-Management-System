@@ -1,4 +1,4 @@
-package com.example.studentmanagementsystem;
+package com.example.studentmanagementsystem.DBHandlers;
 
 public class RefferenceMaterialsModel {
     private String id;

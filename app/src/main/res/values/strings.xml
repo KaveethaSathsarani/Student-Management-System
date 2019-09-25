@@ -12,8 +12,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_admin_notices">AdminNotices</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+
     <string name="delete">DELETE</string>
     <string name="title">Title</string>
     <string name="add">ADD</string>
@@ -58,6 +57,38 @@
     <string name="grade1008">Grade</string>
     <string name="comments1009">Comments</string>
     <string name="resultsSheet1110">Results Sheet</string>
+    <string name="addpapers">ADDPAPERS</string>
+    <string name="addnotifications">ADDNOTIFICATIONS</string>
+    <string name="addexams">ADDEXAMS</string>
+    <string name="addtimetables">ADDTIMETABLES</string>
+    <string name="title_activity_admin_profile">AdminProfile</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="sign_in">Sign In</string>
+    <string name="username">Username</string>
+    <string name="addprofiles">ADDPROFILES</string>
+    <string name="menu">Menu</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_admin__profile">Admin_Profile</string>
+    <string name="profile_edit">Profile Edit</string>
+    <string name="password">Password</string>
+    <string name="create1">Create</string>
+    <string name="admin_name">Admin Name</string>
+    <string name="admin_id">Admin Id</string>
+    <string name="sign_in_as_student">SIGN IN AS STUDENT</string>
+    <string name="sign_in_as_admin">SIGN IN AS ADMIN</string>
+    <string name="dd_mm_yyyy">dd-mm-yyyy</string>
+    <string name="background">background</string>
+    <string name="search">search</string>
+
     <string name="viewTimetable_admin">View</string>
     <string name="time_table_id_admin">Time Table ID</string>
     <string name="teacher_admin">Teacher</string>
