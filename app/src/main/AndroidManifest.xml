@@ -13,10 +13,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".AdminExam">
         </activity>
         <activity android:name=".Splash"></activity>
+=======
+>>>>>>> origin/master
         <activity
+            android:name=".AdminReferenceMaterials"
+            android:label="@string/title_activity_admin_reference_materials"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".CardViewNotices" />
+        <activity android:name=".AdminExam" />
+        <activity android:name=".Admin_Profile" />
+        <activity android:name=".login1"></activity>
+        <activity
+            android:name=".AdminNotices"
+            android:label="@string/title_activity_admin_notices"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar" />
             android:name=".AdminReferenceMaterials"
             android:label="@string/title_activity_admin_reference_materials"
             android:windowSoftInputMode="adjustResize"

@@ -73,6 +73,7 @@
     <string name="grade1008">Grade</string>
     <string name="comments1009">Comments</string>
     <string name="resultsSheet1110">Results Sheet</string>
+<<<<<<< HEAD
     <string name="title_activity_admin_exam_panel">AdminExamPanel</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
@@ -98,6 +99,21 @@
     <string name="searchBtn1025">Serch By ID</string>
 
 
+=======
+    <string name="todo3024">TODO</string>
+    <string name="title_activity_admin_papers">AdminPapers</string>
+    <string name="choose3009">CHOOSE</string>
+    <string name="reference_materials_id3010">Reference Materials ID</string>
+    <string name="reference_material_title3011">Reference Material Title</string>
+    <string name="reference_material_url3012">Reference Material URL</string>
+    <string name="title_activity_admin_reference_materials">AdminReferenceMaterials</string>
+    <string name="upload3015">UPLOAD</string>
+    <string name="todo3025">TODO</string>
+    <string name="todo3026">TODO</string>
+    <string name="admin">Admin</string>
+    <string name="admin3021">ADMIN</string>
+    <string name="search3028">Search</string>
+>>>>>>> origin/master
     <string name="todo3024">TODO</string>
     <string name="title_activity_admin_papers">AdminPapers</string>
     <string name="choose3009">CHOOSE</string>
@@ -129,7 +145,10 @@
     <string name="username">Username</string>
     <string name="addprofiles">ADDPROFILES</string>
     <string name="menu">Menu</string>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     <string name="title_activity_admin__profile">Admin_Profile</string>
     <string name="profile_edit">Profile Edit</string>
     <string name="password">Password</string>
