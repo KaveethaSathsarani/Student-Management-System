@@ -66,7 +66,7 @@ public class RecycleView_TimeTable {
                     intent.putExtra("venue",mVenue.getText().toString());
                     intent.putExtra("day",mDay.getText().toString());
                     intent.putExtra("time",mTime.getText().toString());
-                    intent.putExtra("endtime",mEndtime.getText().toString());
+                    intent.putExtra("endTime",mEndtime.getText().toString());
 
                     mContext.startActivity(intent);
 

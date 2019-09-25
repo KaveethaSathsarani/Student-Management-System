@@ -49,7 +49,7 @@ public class TimeTableDetails extends AppCompatActivity {
         venue = getIntent().getStringExtra("venue");
         day = getIntent().getStringExtra("day");
         time = getIntent().getStringExtra("time");
-        endtime = getIntent().getStringExtra("endtime");
+        endtime = getIntent().getStringExtra("endTime");
 
         mSubId_editText = (EditText) findViewById(R.id.subId_edit);
         mSubId_editText.setText(subId);

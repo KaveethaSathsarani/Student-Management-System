@@ -112,6 +112,8 @@ public class Profile extends Fragment  {
 
                 fr.replace(R.id.fragment_container,profileEdit);
                 fr.commit();
+
+
             }
         });
 

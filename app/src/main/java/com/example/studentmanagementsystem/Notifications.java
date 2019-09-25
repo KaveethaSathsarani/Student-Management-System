@@ -28,7 +28,7 @@ public class Notifications extends Fragment {
         });*/
 
         return rootView;
-        return inflater.inflate(R.layout.fragment_notifiction,null);
+
     }
 }
 

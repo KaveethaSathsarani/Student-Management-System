@@ -60,8 +60,8 @@ public class MainClass extends AppCompatActivity implements BottomNavigationView
 
     }
 
-        fm.beginTransaction().add(R.id.container,timeTable).commit();
-    }
+        //fm.beginTransaction().add(R.id.container,timeTable).commit();
+    //}
 
     private boolean loadFragment(Fragment fragment){
         if(fragment != null){

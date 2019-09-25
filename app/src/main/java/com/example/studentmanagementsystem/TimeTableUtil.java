@@ -64,7 +64,7 @@ public class TimeTableUtil {
                     for(DataSnapshot ds: dataSnapshot.getChildren()){
 
                         SubjectModel subjectModel = ds.getValue(SubjectModel.class);
-                        subjectModel.setKey(ds.getKey());
+                        subjectModel.setSubId(ds.getKey());
                         DataCache.add(subjectModel);
 
                     }
@@ -104,7 +104,7 @@ public class TimeTableUtil {
                     for(DataSnapshot ds: dataSnapshot.getChildren()){
 
                         SubjectModel subjectModel = ds.getValue(SubjectModel.class);
-                        subjectModel.setKey(ds.getKey());
+                        subjectModel.setSubId(ds.getKey());
                         DataCache.add(subjectModel);
 
                     }

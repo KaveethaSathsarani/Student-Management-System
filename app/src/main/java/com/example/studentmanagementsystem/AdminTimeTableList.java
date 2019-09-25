@@ -9,7 +9,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.SearchView;
 
 import com.example.studentmanagementsystem.DBHandlers.SubjectModel;
@@ -29,8 +31,9 @@ public class AdminTimeTableList extends AppCompatActivity implements SearchView.
     private LinearLayoutManager layoutManager;
     MyAdapter adapter;
 
-    EditText search_edit_text;
+    ImageButton timetable_addAdmin;
 
+    EditText search_edit_text;
 
 
     @Override
@@ -41,12 +44,21 @@ public class AdminTimeTableList extends AppCompatActivity implements SearchView.
         initializeViews();
         bindData();
 
+        timetable_addAdmin = (ImageButton)findViewById(R.id.timetable_addAdmin);
+
         mRecyclerView = (RecyclerView) findViewById(R.id.recycleview_subjects);
 
 
         mDatabase = FirebaseDatabase.getInstance();
 
         //mReference = mDatabase.getReference("SubjectModel");
+
+        timetable_addAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openTimetable_addAdmin();
+            }
+        });
 
         new TimeTableFirebase().viewTimeTable(new TimeTableFirebase.DataStatus(){
 
@@ -139,6 +151,12 @@ public class AdminTimeTableList extends AppCompatActivity implements SearchView.
         TimeTableUtil.search(this, TimeTableUtil.getDatabaseReference(),adapter, query);
         return false;
 
+    }
+
+
+    private void openTimetable_addAdmin(){
+        Intent intent = new Intent(this, AddTimeTable.class);
+        startActivity(intent);
     }
 
 

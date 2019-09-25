@@ -156,4 +156,5 @@
     <string name="updatetimetable">UPDATE</string>
     <string name="deletetimetable">DELETE</string>
     <string name="backtimetable">BACK</string>
+    <string name="subject_id_editTimetables_admin">Subject ID</string>
 </resources>

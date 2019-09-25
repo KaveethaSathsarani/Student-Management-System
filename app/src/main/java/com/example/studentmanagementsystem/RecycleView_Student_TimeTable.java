@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,12 +21,16 @@ public class RecycleView_Student_TimeTable{
     private Context mContext;
     private SubjectModelAdapter mSubjectModelAdapter;
 
+    ImageButton btm;
+
     public void setConfig(RecyclerView recyclerView, Context context, List<SubjectModel> subjects, List<String> keys){
 
         mContext = context;
         mSubjectModelAdapter = new SubjectModelAdapter(subjects, keys);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setAdapter(mSubjectModelAdapter);
+
+
 
     }
 
@@ -117,6 +122,8 @@ public class RecycleView_Student_TimeTable{
             return mSubjectList.size();
         }
     }
+
+
 
 
 }

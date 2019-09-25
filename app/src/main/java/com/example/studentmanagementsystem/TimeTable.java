@@ -65,6 +65,7 @@ public class TimeTable extends Fragment {
                         String svenue = dataSnapshot.child("venue").getValue().toString();
                         String sday = dataSnapshot.child("day").getValue().toString();
                         String stime = dataSnapshot.child("time").getValue().toString();
+                        String sendtime = dataSnapshot.child("endtime").getValue().toString();
 
                         holder.subId.setText(ssubId);
                         holder.subName.setText(ssubName);
@@ -72,6 +73,7 @@ public class TimeTable extends Fragment {
                         holder.venue.setText(svenue);
                         holder.day.setText(sday);
                         holder.time.setText(stime);
+                        holder.endTime.setText(stime);
 
                     }
 
@@ -104,7 +106,7 @@ public class TimeTable extends Fragment {
 
     public static class SubjectsViewHolder extends RecyclerView.ViewHolder{
 
-        TextView subId,subName,teacherName,venue,day,time;
+        TextView subId,subName,teacherName,venue,day,time,endTime;
 
         public SubjectsViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -115,6 +117,7 @@ public class TimeTable extends Fragment {
             venue = itemView.findViewById(R.id.studentView_Venue);
             day = itemView.findViewById(R.id.studentView_day);
             time = itemView.findViewById(R.id.studentView_startTime);
+            endTime = itemView.findViewById(R.id.studentView_endTime);
 
         }
     }

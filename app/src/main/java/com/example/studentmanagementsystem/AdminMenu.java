@@ -13,6 +13,7 @@ import com.example.studentmanagementsystem.Admin_Profile;
 public class AdminMenu extends AppCompatActivity {
 
     ImageButton profile;
+    ImageButton timetables;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +21,21 @@ public class AdminMenu extends AppCompatActivity {
         setContentView(R.layout.activity_admin_menu);
 
         profile = (ImageButton)findViewById(R.id.profiles);
+
+        timetables = (ImageButton)findViewById(R.id.timetables);
+
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openProfiles();
+            }
+        });
+
+
+        timetables.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openTimetables();
             }
         });
 
@@ -34,4 +46,11 @@ public class AdminMenu extends AppCompatActivity {
         Intent intent = new Intent(this, Admin_Profile.class);
         startActivity(intent);
     }
+
+    private void openTimetables(){
+        Intent intent = new Intent(this, AdminTimeTableList.class);
+        startActivity(intent);
+    }
+
+
 }
