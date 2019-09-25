@@ -1,27 +1,35 @@
-package com.example.studentmanagementsystem;
+package com.example.studentmanagementsystem.DBHandlers;
+
+import android.content.Context;
 
 public class StudentModel {
     private  String studentID;
     private String studentName;
     private String school;
-    private int ContactNo;
+    private String dob;
+    private String ContactNo;
     private String address;
     private String gName;
-    private int gcNo;
+    private String gcNo;
     private String password;
+    //private Context context;
     public StudentModel(){
 
     }
-    public StudentModel(String studentID, String studentName, String school, int contactNo, String address, String gName, int gcNo, String password) {
+    public StudentModel(String studentID, String studentName, String school, String dob, String contactNo, String address, String gName, String gcNo, String password) {
+
         this.studentID = studentID;
         this.studentName = studentName;
         this.school = school;
-        ContactNo = contactNo;
+        this.dob = dob;
+        this.ContactNo = contactNo;
         this.address = address;
         this.gName = gName;
         this.gcNo = gcNo;
-        this.password = password;
+       this.password = password;
     }
+
+
 
     public String getStudentID() {
         return studentID;
@@ -47,11 +55,11 @@ public class StudentModel {
         this.school = school;
     }
 
-    public int getContactNo() {
+    public String getContactNo() {
         return ContactNo;
     }
 
-    public void setContactNo(int contactNo) {
+    public void setContactNo(String contactNo) {
         ContactNo = contactNo;
     }
 
@@ -71,11 +79,11 @@ public class StudentModel {
         this.gName = gName;
     }
 
-    public int getGcNo() {
+    public String getGcNo() {
         return gcNo;
     }
 
-    public void setGcNo(int gcNo) {
+    public void setGcNo(String gcNo) {
         this.gcNo = gcNo;
     }
 
@@ -89,4 +97,12 @@ public class StudentModel {
 
 
 
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
 }

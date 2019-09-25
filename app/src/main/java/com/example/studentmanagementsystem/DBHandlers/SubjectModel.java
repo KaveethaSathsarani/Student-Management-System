@@ -1,4 +1,4 @@
-package com.example.studentmanagementsystem;
+package com.example.studentmanagementsystem.DBHandlers;
 
 public class SubjectModel {
     private String subId;
@@ -6,6 +6,8 @@ public class SubjectModel {
     public SubjectModel(){
 
     }
+
+
 
     public SubjectModel(String subId, String subName) {
         this.subId = subId;

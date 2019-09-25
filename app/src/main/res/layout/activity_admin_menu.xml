@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColour"
+    tools:context=".AdminMenu">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="475dp"
+        android:layout_height="821dp"
+        android:alpha="0.2"
+        android:contentDescription="@string/background"
+        android:src="@drawable/mad"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/profiles"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/admin_menu_button"
+        android:contentDescription="@string/addprofiles"
+        android:src="@drawable/admin_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/admin_user" />
+
+    <ImageButton
+        android:id="@+id/timetables"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/admin_menu_button"
+        android:contentDescription="@string/addtimetables"
+        android:src="@drawable/admin_timetable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/admin_timetable" />
+
+    <ImageButton
+        android:id="@+id/exam"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/admin_menu_button"
+        android:contentDescription="@string/addexams"
+        android:src="@drawable/admin_exam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profiles"
+        tools:src="@drawable/admin_exam" />
+
+    <ImageButton
+        android:id="@+id/papers"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/admin_menu_button"
+        android:contentDescription="@string/addpapers"
+        android:src="@drawable/admin_papers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timetables"
+        tools:src="@drawable/admin_papers" />
+
+    <ImageButton
+        android:id="@+id/notifications"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/admin_menu_button"
+        android:contentDescription="@string/addnotifications"
+        android:src="@drawable/admin_notification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exam"
+        tools:src="@drawable/admin_notification" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="196dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/actor"
+        android:text="@string/menu"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/profile001"
+        android:textColor="@color/primaryColour"
+        app:layout_constraintBottom_toBottomOf="@+id/profiles"
+        app:layout_constraintEnd_toEndOf="@+id/profiles"
+        app:layout_constraintStart_toStartOf="@+id/profiles" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/time_table002"
+        app:layout_constraintBottom_toBottomOf="@+id/timetables"
+        app:layout_constraintEnd_toEndOf="@+id/timetables"
+        app:layout_constraintStart_toStartOf="@+id/timetables" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/exam003"
+        android:textColor="@color/primaryColour"
+        app:layout_constraintBottom_toBottomOf="@+id/exam"
+        app:layout_constraintEnd_toEndOf="@+id/exam"
+        app:layout_constraintStart_toStartOf="@+id/exam" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/papers004"
+        android:textColor="@color/primaryColour"
+        app:layout_constraintBottom_toBottomOf="@+id/papers"
+        app:layout_constraintEnd_toEndOf="@+id/papers"
+        app:layout_constraintStart_toStartOf="@+id/papers" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/title_notifications"
+        android:textColor="@color/primaryColour"
+        app:layout_constraintBottom_toBottomOf="@+id/notifications"
+        app:layout_constraintEnd_toEndOf="@+id/notifications"
+        app:layout_constraintStart_toStartOf="@+id/notifications" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
