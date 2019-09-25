@@ -1,6 +1,5 @@
 package com.example.studentmanagementsystem;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -79,6 +78,7 @@ public class Notifications extends Fragment {
 
 
         return rootView;
+        return inflater.inflate(R.layout.fragment_notifiction,null);
     }
 }
 

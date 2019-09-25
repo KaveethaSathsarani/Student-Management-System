@@ -23,6 +23,21 @@
     <string name="notices3007">NOTICES</string>
 
 
+
+    <string name="delete">DELETE</string>
+    <string name="title">Title</string>
+    <string name="add">ADD</string>
+    <string name="update">UPDATE</string>
+    <string name="content">Content</string>
+    <string name="notice_ID2">Notice ID</string>
+    <string name="notice_id">Notice ID</string>
+    <string name="notices">NOTICES</string>
+    <string name="for_all_students">For All Students</string>
+    <string name="please_pay_your_class_fees_before_2nd_week">Please pay your class fees before 2nd week</string>
+    <string name="for_grade_9_students">For Grade 9 Students</string>
+    <string name="there_will_be_no_history_class_on_16th_of_september">There will be no History class on 16th of September</string>
+
+
     <string name="studentProf">studentProf</string>
     <string name="backgroundtop">backgroundTop</string>
     <string name="backgroundTop">backgroundTop</string>
@@ -66,4 +81,36 @@
     <string name="admin">Admin</string>
     <string name="admin3021">ADMIN</string>
     <string name="search3028">Search</string>
+    <string name="addpapers">ADDPAPERS</string>
+    <string name="addnotifications">ADDNOTIFICATIONS</string>
+    <string name="addexams">ADDEXAMS</string>
+    <string name="addtimetables">ADDTIMETABLES</string>
+    <string name="title_activity_admin_profile">AdminProfile</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="sign_in">Sign In</string>
+    <string name="username">Username</string>
+    <string name="addprofiles">ADDPROFILES</string>
+    <string name="menu">Menu</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_admin__profile">Admin_Profile</string>
+    <string name="profile_edit">Profile Edit</string>
+    <string name="password">Password</string>
+    <string name="create1">Create</string>
+    <string name="admin_name">Admin Name</string>
+    <string name="admin_id">Admin Id</string>
+    <string name="sign_in_as_student">SIGN IN AS STUDENT</string>
+    <string name="sign_in_as_admin">SIGN IN AS ADMIN</string>
+    <string name="dd_mm_yyyy">dd-mm-yyyy</string>
+    <string name="background">background</string>
+    <string name="search">search</string>
+
 </resources>

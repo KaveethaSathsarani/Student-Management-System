@@ -6,17 +6,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.2"
+        android:contentDescription="@string/background"
+        android:src="@drawable/mad"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <View
         android:id="@+id/view2"
         android:layout_width="374dp"
-        android:layout_height="591dp"
+        android:layout_height="520dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="18dp"
-        android:layout_marginBottom="80dp"
-        android:background="@color/formBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/sectionColour"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,7 +35,7 @@
         android:id="@+id/profilePic2"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="28dp"
         android:contentDescription="@string/profilePic"
         android:src="@drawable/sample"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,10 +44,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/layout1"
         android:layout_width="155dp"
-        android:layout_height="353dp"
-        android:layout_marginTop="224dp"
+        android:layout_height="310dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="8dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,144 +56,162 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/studentId"
+            android:id="@+id/studentId1"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="@string/student_id01"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/studentName"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="@string/student_name1"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/DOB"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="35dp"
             android:text="@string/date_of_birth"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/gender"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="@string/gender"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/school"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="35dp"
             android:text="@string/school"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/address"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="35dp"
             android:text="@string/address"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/contacNO"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="35dp"
             android:text="@string/contact_no"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/guardianNane"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="35dp"
             android:text="@string/guardians_name"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/guardianCNo"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:text="@string/guardians_contact_no"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/layout2"
         android:layout_width="201dp"
-        android:layout_height="353dp"
-        android:layout_marginTop="224dp"
+        android:layout_height="310dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="29dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toEndOf="@+id/layout1"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView31"
+            android:id="@+id/stdId"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="30dp"
+            android:textStyle="bold"
+            android:visibility="visible" />
 
         <TextView
-            android:id="@+id/textView32"
+            android:id="@+id/stdName"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="30dp"
+            android:textStyle="bold"
+            android:visibility="visible" />
 
-        <TextView
-            android:id="@+id/textView33"
+        <EditText
+            android:id="@+id/editText1"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="35dp"
+            android:ems="10"
+            android:hint="@string/dd_mm_yyyy"
+            android:importantForAutofill="no"
+            android:inputType="date"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/radioGroup"
+        <EditText
+            android:id="@+id/editText2"
             android:layout_width="match_parent"
-            android:layout_height="31dp">
+            android:layout_height="35dp"
+            android:ems="10"
+            android:hint="@string/school"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-            <RadioButton
-                android:id="@+id/male"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/male"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <RadioButton
-                android:id="@+id/female"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:text="@string/female"
-                app:layout_constraintStart_toEndOf="@+id/male"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <TextView
-            android:id="@+id/textView34"
+        <EditText
+            android:id="@+id/editText3"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="35dp"
+            android:ems="10"
+            android:hint="@string/address"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView35"
+        <EditText
+            android:id="@+id/editText4"
             android:layout_width="match_parent"
-            android:layout_height="60dp" />
+            android:layout_height="35dp"
+            android:ems="10"
+            android:hint="@string/contact_no"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView36"
+        <EditText
+            android:id="@+id/editText5"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="35dp"
+            android:ems="10"
+            android:hint="@string/guardians_name"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView37"
+        <EditText
+            android:id="@+id/editText6"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
-        <TextView
-            android:id="@+id/textView38"
-            android:layout_width="match_parent"
-            android:layout_height="52dp" />
+            android:layout_height="53dp"
+            android:autofillHints="@string/guardians_contact_no"
+            android:ems="10"
+            android:hint="@string/guardians_contact_no"
+            android:inputType="phone"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -190,8 +219,9 @@
         android:id="@+id/imageButton"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginEnd="136dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="116dp"
+        android:background="@color/transparent"
         android:contentDescription="@string/edit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -202,10 +232,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/white_background_button"
         android:text="@string/save"
+        android:textColor="@color/button"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/layout2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,14 +20,24 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".CardViewNotices" />
         <activity android:name=".AdminExam" />
+        <activity android:name=".Splash"></activity>
         <activity
             android:name=".AdminNotices"
             android:label="@string/title_activity_admin_notices"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".Admin_Profile"
+            android:label="@string/title_activity_admin__profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AdminExam" />
         <activity
-            android:name=".mainClass"
-            android:label="@string/app_name">
+            android:name=".AdminMenu"
+            android:label="@string/app_name" />
+        <activity android:name=".MainClass" />
+        <activity
+            android:name=".login1"
+            android:label="Study Lab"
+            android:logo="@drawable/logo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

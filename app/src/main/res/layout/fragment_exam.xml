@@ -68,7 +68,7 @@
         app:layout_constraintVertical_bias="0.019" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/layout1"
         android:layout_width="114dp"
         android:layout_height="259dp"
         android:layout_marginStart="24dp"
@@ -133,7 +133,7 @@
         android:textColor="@android:color/background_dark"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/layout1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonViewMarks" />

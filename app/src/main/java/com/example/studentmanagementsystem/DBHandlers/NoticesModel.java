@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+package com.example.studentmanagementsystem.DBHandlers;
 
 public class NoticesModel  {
 
