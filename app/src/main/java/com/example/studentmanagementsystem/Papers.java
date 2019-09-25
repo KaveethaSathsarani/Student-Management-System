@@ -4,19 +4,22 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Spinner;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
+import com.example.studentmanagementsystem.DBHandlers.RefferenceMaterialsModel;
 import com.example.studentmanagementsystem.ui.main.ListViewAdapterReferenceMaterials;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,15 +29,14 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 
 public class Papers extends Fragment {
 
-    ListView myPDFListView;
-    DatabaseReference databaseReference;
-    List<RefferenceMaterialsModel> models;
-    ListViewAdapterReferenceMaterials adapter;
+    private ListView myPDFListView;
+    private DatabaseReference databaseReference;
+    private List<RefferenceMaterialsModel> models;
+    private ListViewAdapterReferenceMaterials adapter;
 
     @Nullable
     @Override
@@ -42,14 +44,14 @@ public class Papers extends Fragment {
         //return inflater.inflate(R.layout.fragment_papers,null);
 
         View v =inflater.inflate(R.layout.fragment_papers, container, false);
-        myPDFListView=(ListView)v.findViewById(R.id.papers_student_list);
+        myPDFListView=v.findViewById(R.id.papers_student_list);
         models=new ArrayList<>();
 
         viewAllFiles();
 
 
 
-        Button adminbtn = (Button) v.findViewById(R.id.papers_btn);
+        Button adminbtn =  v.findViewById(R.id.papers_btn);
         adminbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,6 +114,31 @@ public class Papers extends Fragment {
 
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+
+        inflater.inflate(R.menu.papers_menu,menu);
+        MenuItem searchItem=menu.findItem(R.id.search_papers);
+        SearchView searchView=(SearchView)searchItem.getActionView();
+
+        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+
+                adapter.getFilter().filter(s);
+                return false;
+            }
+        });
 
     }
+}
 

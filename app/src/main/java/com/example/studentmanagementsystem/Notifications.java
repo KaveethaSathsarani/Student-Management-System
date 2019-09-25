@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.studentmanagementsystem.DBHandlers.NoticesModel;
 import com.example.studentmanagementsystem.ui.main.RecyclerViewAdapterNotices;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,15 +29,15 @@ public class Notifications extends Fragment {
 
     private RecyclerView noticeList;
     private DatabaseReference reference;
-    ArrayList<NoticesModel> list;
-    RecyclerViewAdapterNotices adapter;
+    private ArrayList<NoticesModel> list;
+    private RecyclerViewAdapterNotices adapter;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_notifiction, null);
+        View rootView = inflater.inflate(R.layout.fragment_notifiction, container,false);
 
-        Button adminbtn = (Button) rootView.findViewById(R.id.notices_admin_btn);
+        Button adminbtn =  rootView.findViewById(R.id.notices_admin_btn);
         adminbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,11 +47,11 @@ public class Notifications extends Fragment {
             }
         });
 
-        noticeList=(RecyclerView)rootView.findViewById(R.id.noticeRecyclerView2);
+        noticeList=rootView.findViewById(R.id.noticeRecyclerView2);
         //noticeList.setHasFixedSize(true);
         noticeList.setHasFixedSize(true);
         noticeList.setLayoutManager(new LinearLayoutManager(getContext()));
-        list=new ArrayList<NoticesModel>();
+        list=new ArrayList<>();
 
         reference= FirebaseDatabase.getInstance().getReference("NoticesModel");
         reference.addValueEventListener(new ValueEventListener() {
