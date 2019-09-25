@@ -1,5 +1,6 @@
 package com.example.studentmanagementsystem;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,16 +37,6 @@ public class Notifications extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_notifiction, container,false);
 
-        Button adminbtn =  rootView.findViewById(R.id.notices_admin_btn);
-        adminbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Pass the context and the Activity class you need to open from the Fragment Class, to the Intent
-                Intent intent = new Intent(v.getContext(), AdminNotices.class);
-                startActivity(intent);
-            }
-        });
-
         noticeList=rootView.findViewById(R.id.noticeRecyclerView2);
         //noticeList.setHasFixedSize(true);
         noticeList.setHasFixedSize(true);
@@ -78,7 +69,7 @@ public class Notifications extends Fragment {
 
 
         return rootView;
-        return inflater.inflate(R.layout.fragment_notifiction,null);
+
     }
 }
 

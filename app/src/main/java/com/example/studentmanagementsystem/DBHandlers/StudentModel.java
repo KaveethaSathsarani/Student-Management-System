@@ -1,5 +1,5 @@
 package com.example.studentmanagementsystem.DBHandlers;
-package com.example.studentmanagementsystem.DBHandlers;
+//package com.example.studentmanagementsystem.DBHandlers;
 
 import android.content.Context;
 

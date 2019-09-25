@@ -13,13 +13,15 @@ import com.example.studentmanagementsystem.Admin_Profile;
 public class AdminMenu extends AppCompatActivity {
 
     ImageButton profile;
+    ImageButton notices;
+    ImageButton papers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_menu);
 
-        profile = (ImageButton)findViewById(R.id.profiles);
+        profile = findViewById(R.id.profiles);
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -27,7 +29,33 @@ public class AdminMenu extends AppCompatActivity {
             }
         });
 
+        notices=findViewById(R.id.notifications);
+        notices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openNotices();
+            }
+        });
 
+        papers=findViewById(R.id.papers);
+        papers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openPapers();
+            }
+        });
+
+
+    }
+
+    private void openPapers() {
+        Intent intent = new Intent(this, AdminReferenceMaterials.class);
+        startActivity(intent);
+    }
+
+    private void openNotices() {
+        Intent intent = new Intent(this, AdminNotices.class);
+        startActivity(intent);
     }
 
     private void openProfiles(){

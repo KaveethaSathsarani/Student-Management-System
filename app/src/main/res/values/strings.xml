@@ -99,8 +99,6 @@
     <string name="username">Username</string>
     <string name="addprofiles">ADDPROFILES</string>
     <string name="menu">Menu</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
     <string name="title_activity_admin__profile">Admin_Profile</string>
     <string name="profile_edit">Profile Edit</string>
     <string name="password">Password</string>
@@ -112,5 +110,6 @@
     <string name="dd_mm_yyyy">dd-mm-yyyy</string>
     <string name="background">background</string>
     <string name="search">search</string>
+    <string name="todo3030">TODO</string>
 
 </resources>

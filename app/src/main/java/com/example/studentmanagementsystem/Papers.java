@@ -41,8 +41,7 @@ public class Papers extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_papers,null);
-    }
+
         //return inflater.inflate(R.layout.fragment_papers,null);
 
         View v =inflater.inflate(R.layout.fragment_papers, container, false);
@@ -53,15 +52,7 @@ public class Papers extends Fragment {
 
 
 
-        Button adminbtn =  v.findViewById(R.id.papers_btn);
-        adminbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Pass the context and the Activity class you need to open from the Fragment Class, to the Intent
-                Intent intent = new Intent(getContext(), AdminReferenceMaterials.class);
-                startActivity(intent);
-            }
-        });
+
 
         myPDFListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

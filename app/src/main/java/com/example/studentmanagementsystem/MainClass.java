@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -96,7 +97,7 @@ public class MainClass extends AppCompatActivity implements BottomNavigationView
         Fragment fragment;
 
         if (view == findViewById(R.id.notification_button)) {
-            Log.i("Info","notification button clicked");
+           // Log.i("Info","notification button clicked");
             fragment = new Notifications();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
 
