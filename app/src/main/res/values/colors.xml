@@ -2,10 +2,11 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B34</color>
+    <color name="primaryColour">#88E7FC</color>
 
 
-    <color name="colorAccent">#FFFFFF</color>
-    <color name="primaryColour">#64AFF0</color>
+
     <color name="formBackground">#46808382</color>
 
     <color name="color_timetable1">#DB4437</color>
@@ -15,4 +16,5 @@
     <color name="white">#FFFFFF</color>
     <color name="sectionColour">#9F64AFF0</color>
     <color name="transparent">#01FFFFFF</color>
+    <color name="List">#CCE5FB</color>
 </resources>

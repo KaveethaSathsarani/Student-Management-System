@@ -5,12 +5,12 @@ public class ExamSubjectStudentModel {
     private SubjectModel subjectModel;
     private StudentModel studentModel;
     private double marks;
-    private char grade;
+    private String grade;
 
     public ExamSubjectStudentModel(){
 
     }
-    public ExamSubjectStudentModel(ExamModel examModel, SubjectModel subjectModel, StudentModel studentModel, double marks, char grade) {
+    public ExamSubjectStudentModel(ExamModel examModel, SubjectModel subjectModel, StudentModel studentModel, double marks, String grade) {
         this.examModel = examModel;
         this.subjectModel = subjectModel;
         this.studentModel = studentModel;
@@ -50,11 +50,11 @@ public class ExamSubjectStudentModel {
         this.marks = marks;
     }
 
-    public char getGrade() {
+    public String getGrade() {
         return grade;
     }
 
-    public void setGrade(char grade) {
+    public void setGrade(String grade) {
         this.grade = grade;
     }
 }

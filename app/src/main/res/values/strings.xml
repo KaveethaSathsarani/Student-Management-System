@@ -8,10 +8,26 @@
     <string name="exam003">Exam</string>
     <string name="papers004">Papers</string>
     <string name="notification_button">notification_button</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_my">AdminExamView</string>
+    <string name="title_activity_about">AdminExamInsertUpdate</string>
+    <string name="title_activity_contact">AdminExamDelete</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_admin_notices">AdminNotices</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="delete3001">DELETE</string>
+    <string name="title3002">Title</string>
+    <string name="add3003">ADD</string>
+    <string name="update3004">UPDATE</string>
+    <string name="content3005">Content</string>
+    <string name="notice_id3006">Notice ID</string>
+    <string name="notices3007">NOTICES</string>
+
+
 
     <string name="delete">DELETE</string>
     <string name="title">Title</string>
@@ -57,6 +73,45 @@
     <string name="grade1008">Grade</string>
     <string name="comments1009">Comments</string>
     <string name="resultsSheet1110">Results Sheet</string>
+
+    <string name="title_activity_admin_exam_panel">AdminExamPanel</string>
+
+    <string name="title_activity_admin_exam">AdminExam</string>
+    <string name="slidingtabsusingviewpager1010" />
+    <string name="examNameHint1011">Enter the Exam Name</string>
+    <string name="createExam1111">Add</string>
+    <string name="removeExam1112">Remove</string>
+    <string name="examMarks">Marks</string>
+    <string name="examMarksHint1112">Enter the Marks</string>
+    <string name="examMarksAdd1113">Add</string>
+    <string name="examMarksUpdate1114">Update</string>
+    <string name="subjectIdHint1115">Enter the Subject ID</string>
+    <string name="examStudentIdHint">Enter the Student ID</string>
+    <string name="examTime1015">Time</string>
+    <string name="examVenue1016">Venue</string>
+    <string name="examDate1017">Date</string>
+    <string name="examTimeHint1018">Ex:08-09</string>
+    <string name="examDateHint1019">Enter the Date</string>
+    <string name="examVenueHint1020">Enter the Venue</string>
+    <string name="grade1020">Grade</string>
+    <string name="gradeHint1021">Enter the Grade</string>
+    <string name="searchBtn1025">Serch By ID</string>
+
+
+
+    <string name="todo3024">TODO</string>
+    <string name="title_activity_admin_papers">AdminPapers</string>
+    <string name="choose3009">CHOOSE</string>
+    <string name="reference_materials_id3010">Reference Materials ID</string>
+    <string name="reference_material_title3011">Reference Material Title</string>
+    <string name="reference_material_url3012">Reference Material URL</string>
+    <string name="title_activity_admin_reference_materials">AdminReferenceMaterials</string>
+    <string name="upload3015">UPLOAD</string>
+    <string name="todo3025">TODO</string>
+    <string name="todo3026">TODO</string>
+    <string name="admin">Admin</string>
+    <string name="admin3021">ADMIN</string>
+    <string name="search3028">Search</string>
     <string name="addpapers">ADDPAPERS</string>
     <string name="addnotifications">ADDNOTIFICATIONS</string>
     <string name="addexams">ADDEXAMS</string>
@@ -75,8 +130,9 @@
     <string name="username">Username</string>
     <string name="addprofiles">ADDPROFILES</string>
     <string name="menu">Menu</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+
+
+
     <string name="title_activity_admin__profile">Admin_Profile</string>
     <string name="profile_edit">Profile Edit</string>
     <string name="password">Password</string>
@@ -88,6 +144,7 @@
     <string name="dd_mm_yyyy">dd-mm-yyyy</string>
     <string name="background">background</string>
     <string name="search">search</string>
+    <string name="todo3030">TODO</string>
 
     <string name="viewTimetable_admin">View</string>
     <string name="time_table_id_admin">Time Table ID</string>

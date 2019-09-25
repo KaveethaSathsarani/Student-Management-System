@@ -1,3 +1,4 @@
+//noinspection GradleCompatible
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 //apply plugin: 'com.google.gms.google-services'
@@ -30,14 +31,28 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     implementation 'com.google.firebase:firebase-database:16.0.4'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     implementation 'com.google.firebase:firebase-database:16.0.4'
     implementation 'com.firebaseui:firebase-ui-database:3.2.2'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     implementation 'androidx.annotation:annotation:1.0.1'
+    implementation 'com.google.firebase:firebase-storage:16.0.4'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     //implementation 'com.google.firebase:firebase-auth:19.0.0'
+
+    implementation 'com.firebaseui:firebase-ui-database:4.2.1'
+
+
+
+    implementation 'com.android.support:support-annotations:26.0.0'
+
+    implementation 'com.firebaseui:firebase-ui-database:4.2.1'
+
+
+
 }
 //new add
 apply plugin: 'com.google.gms.google-services'

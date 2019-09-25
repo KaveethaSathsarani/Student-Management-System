@@ -51,8 +51,12 @@
 
         android:background="@color/primaryColour"
         android:contentDescription="@string/notification_button"
+        android:onClick="callNotices"
         android:src="@drawable/notifications"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+

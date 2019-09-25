@@ -1,0 +1,6 @@
+<root>
+    <item name='androidx.core.provider.FontsContractCompat.FontRequestCallback RESULT_OK'>
+        <annotation name='java.lang.Deprecated' />
+        <annotation name='org.jetbrains.annotations.NotNull' />
+    </item>
+</root>

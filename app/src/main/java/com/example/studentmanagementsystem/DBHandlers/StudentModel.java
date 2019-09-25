@@ -1,4 +1,5 @@
 package com.example.studentmanagementsystem.DBHandlers;
+//package com.example.studentmanagementsystem.DBHandlers;
 
 
 import android.content.Context;
@@ -95,6 +96,9 @@ public class StudentModel {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
+
 
     public String getDob() {
         return dob;
