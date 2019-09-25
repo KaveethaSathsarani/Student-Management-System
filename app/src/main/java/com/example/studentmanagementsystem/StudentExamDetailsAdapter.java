@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.studentmanagementsystem.DBHandlers.ExamModel;
+
 import java.util.ArrayList;
 
 public class StudentExamDetailsAdapter extends  RecyclerView.Adapter<StudentExamDetailsAdapter.MyViewHolderStudent> {

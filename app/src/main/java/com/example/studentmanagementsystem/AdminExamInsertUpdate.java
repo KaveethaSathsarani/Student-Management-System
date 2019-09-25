@@ -16,6 +16,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.studentmanagementsystem.DBHandlers.ExamModel;
+import com.example.studentmanagementsystem.DBHandlers.ExamSubjectStudentModel;
+import com.example.studentmanagementsystem.DBHandlers.StudentModel;
+import com.example.studentmanagementsystem.DBHandlers.SubjectModel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -369,7 +373,7 @@ public class AdminExamInsertUpdate extends AppCompatActivity {
                     //studentModel.setAddress(address);
                     //studentModel.setContactNo(ContactNo);
                     //studentModel.setSchool(school);
-                    studentModel.setGcNo(gcNo);
+                    //studentModel.setGcNo(gcNo);
                     //studentModel.setgName(gName);
                     studentModel.setPassword(password);
                 }

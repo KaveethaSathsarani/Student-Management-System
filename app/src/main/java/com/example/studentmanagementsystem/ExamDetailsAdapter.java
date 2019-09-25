@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.studentmanagementsystem.DBHandlers.ExamModel;
+
 import java.util.ArrayList;
 
 public class ExamDetailsAdapter extends RecyclerView.Adapter<ExamDetailsAdapter.MyViewHolder> {
@@ -29,11 +31,11 @@ public class ExamDetailsAdapter extends RecyclerView.Adapter<ExamDetailsAdapter.
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
             holder.etExamName1.setText(exams.get(position).getExamName());
-            holder.etExamId1.setText("Exam ID:   "+exams.get(position).getExamId());
-            holder.etExamGrade1.setText("Exam Grade:   "+exams.get(position).getGrade());
-            holder.etExamVenue1.setText("Exam Venue:  "+exams.get(position).getExamVenue());
-            holder.etExamDate1.setText("Exam Date:   "+exams.get(position).getExamDate());
-            holder.etExamTime1.setText("Exam TIme:   "+exams.get(position).getExamTime());
+            holder.etExamId1.setText("  Exam ID:   "+exams.get(position).getExamId());
+            holder.etExamGrade1.setText("  Exam Grade:   "+exams.get(position).getGrade());
+            holder.etExamVenue1.setText("  Exam Venue:  "+exams.get(position).getExamVenue());
+            holder.etExamDate1.setText("  Exam Date:   "+exams.get(position).getExamDate());
+            holder.etExamTime1.setText("  Exam TIme:   "+exams.get(position).getExamTime());
             ExamModel examModel = exams.get(position);
     }
 

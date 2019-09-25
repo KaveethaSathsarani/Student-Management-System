@@ -105,8 +105,7 @@
     <string name="username">Username</string>
     <string name="addprofiles">ADDPROFILES</string>
     <string name="menu">Menu</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+
     <string name="title_activity_admin__profile">Admin_Profile</string>
     <string name="profile_edit">Profile Edit</string>
     <string name="password">Password</string>
