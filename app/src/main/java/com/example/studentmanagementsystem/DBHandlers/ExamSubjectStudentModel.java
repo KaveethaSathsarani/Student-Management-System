@@ -1,4 +1,4 @@
-package com.example.studentmanagementsystem;
+package com.example.studentmanagementsystem.DBHandlers;
 
 public class ExamSubjectStudentModel {
     private ExamModel examModel;

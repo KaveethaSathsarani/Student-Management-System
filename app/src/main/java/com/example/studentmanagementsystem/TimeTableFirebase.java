@@ -2,6 +2,7 @@ package com.example.studentmanagementsystem;
 
 import androidx.annotation.NonNull;
 
+import com.example.studentmanagementsystem.DBHandlers.SubjectModel;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

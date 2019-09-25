@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.studentmanagementsystem.DBHandlers.SubjectModel;
+
 import java.util.List;
 import java.util.Locale;
 
